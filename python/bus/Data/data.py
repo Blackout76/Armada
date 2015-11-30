@@ -19,7 +19,7 @@ def generateTravels():
 					travels.append(travelsLine[geneIndex])
 			currentTerminus = []
 			currentDist = None
-			print "New line:" + str(currentLine)
+			# print "New line:" + str(currentLine)
 			currentLine = line.split(' ')[1]
 		elif "T" in line:
 			currentTerminus.append(line)
