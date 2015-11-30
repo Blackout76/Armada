@@ -20,9 +20,9 @@ class Travel(object):
 		return false
 	def isTravelCompatible(self,travel,addToList):
 		# addToList = false if just return the value  /// addToList = true for return and put in list
-		# -1 if travel can be do before self
+		# -1 if travel can be do before self 		ex: self.travelBefore.append(travel)
 		# 0  if travel is in the same time
-		# 1  if travel can be do after self
+		# 1  if travel can be do after self 		ex: self.travelAfter.append(travel)
 		return 0
 
 	def toString (self):
