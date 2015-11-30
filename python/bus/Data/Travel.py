@@ -19,7 +19,7 @@ class Travel(object):
 			return true
 		return false
 
-	def isTravelCompatible(self,travel,links,addToList):
+	def isTravelCompatible(self,travel,addToList,links):
 		# addToList = false if just return the value  /// addToList = true for return and put in list
 		# -1 if travel can be do before self 		ex: self.travelBefore.append(travel)
 		# 0  if travel is in the same time

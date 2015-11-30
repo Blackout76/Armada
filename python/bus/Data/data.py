@@ -63,11 +63,11 @@ def generateTravelsOfLine(nameline,terminus,dist):
 		travels.append(Travel(nameline,startPoint,endPoint,distDecoded[i+1]))
 	return travels
 
-def generateLinksTravels(travels):
+def generateLinksTravels(travels,links):
 	for travel in travels:
 		for travelTMP in travels:
 			if not travel == travelTMP:
-				travel.isTravelCompatible(travelTMP,links,True)
+				travel.isTravelCompatible(travelTMP,True,links)
 
 def generateLiaisons():
 	file = open('Data/terminus.csv', 'r')
