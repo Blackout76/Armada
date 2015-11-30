@@ -3,7 +3,7 @@ from Travel import *
 ##############################################
 #####      GENERATION TRAVELS LINKS     ######
 ##############################################
-def generateTravels():
+def generateTravels(links):
 	file = open('Data/horaires.csv', 'r')
 	data = file.readlines()
 	travels = []
@@ -31,7 +31,7 @@ def generateTravels():
 		travels.append(travelsLine[geneIndex])
 
 	# Init travels to have before and after travels
-	generateLinksTravels(travels)
+	generateLinksTravels(travels,links)
 	return travels
 
 def generateTravelsOfLine(nameline,terminus,dist):
@@ -67,7 +67,7 @@ def generateLinksTravels(travels):
 	for travel in travels:
 		for travelTMP in travels:
 			if not travel == travelTMP:
-				travel.isTravelCompatible(travelTMP,True)
+				travel.isTravelCompatible(travelTMP,links,True)
 
 def generateLiaisons():
 	file = open('Data/terminus.csv', 'r')
