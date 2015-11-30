@@ -15,13 +15,13 @@ class Roulette():
 		for i in range(len(self.items)):
 			if total > 0:
 				self.items[i].score = self.items[i].score * 100.0 / total
-		self.items.sort(key=lambda x: x.score, reverse=False)
+		self.items.sort(key=lambda x: x.score, reverse=True)
 
 
 	def randomId(self):
 		val = randint(0,1000)/1000.0
 		for i in range(len(self.items)):
-			if val <= self.items[i].score:
+			if val >= self.items[i].score:
 				return self.items[i].id
 		return 0;
 

@@ -4,9 +4,9 @@ from Tools import *
 from time import *
 from math import *
 
-score_objectif = 25666.0000001
+score_objectif = 23333.0000001
 population_size = 100
-iteration = 30
+iteration = 50
 child_population_size = 75
 parents_count_min = 2
 parents_count_max = 2
@@ -23,7 +23,7 @@ for i in range(iteration):
 	populationChild = generateChildren(populationParent,adn_croisement_count)
 	population = insertInPopulation(population,populationChild,population_size,score_objectif)
 
-# printPopulation(population)
+printPopulation(population)
 
 print 'Results:'
 print '		population size: ' + str(population_size)
