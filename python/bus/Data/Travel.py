@@ -6,6 +6,25 @@ class Travel(object):
 		self.endPoint = endPoint;
 		self.travelBefore = []
 		self.travelAfter = []
+
+	def addTravelBefore(self,travel):
+		if not travel in self.travelBefore:
+			self.travelBefore.append(travel)
+			return true
+		return false
+
+	def addTravelAfter(self,travel):
+		if not travel in self.travelAfter:
+			self.travelAfter.append(travel)
+			return true
+		return false
+	def isTravelCompatible(self,travel,addToList):
+		# addToList = false if just return the value  /// addToList = true for return and put in list
+		# -1 if travel can be do before self
+		# 0  if travel is in the same time
+		# 1  if travel can be do after self
+		return 0
+
 	def toString (self):
 		return 'ligne:' + self.lineName + '   start:' + self.startPoint.name +'(' + self.startPoint.time.hour + ':' + self.startPoint.time.min + ')'+ '   end:' + self.endPoint.name +'(' + self.endPoint.time.hour + ':' + self.endPoint.time.min + ')'
 	

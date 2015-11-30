@@ -29,6 +29,9 @@ def generateTravels():
 	travelsLine = generateTravelsOfLine(currentLine,currentTerminus,currentDist)
 	for geneIndex in range(len(travelsLine)):
 		travels.append(travelsLine[geneIndex])
+
+	# Init travels to have before and after travels
+	generateLinksTravels(travels)
 	return travels
 
 def generateTravelsOfLine(nameline,terminus,dist):
@@ -58,9 +61,14 @@ def generateTravelsOfLine(nameline,terminus,dist):
 		startPoint = TravelPoint( terminusDecoded[terminusIndexStart][0], TravelTime(terminusDecoded[terminusIndexStart][i+1].split(':')) )
 		endPoint = TravelPoint( terminusDecoded[terminusIndexEnd][0], TravelTime(terminusDecoded[terminusIndexEnd][i+1].split(':'))  )
 		travels.append(Travel(nameline,startPoint,endPoint,distDecoded[i+1]))
-
 	return travels
-	
+
+def generateLinksTravels(travels):
+	for travel in travels:
+		for travelTMP in travels:
+			if not travel == travelTMP:
+				travel.isTravelCompatible(travelTMP,True)
+
 def generateLiaisons():
 	file = open('Data/terminus.csv', 'r')
 	fileDist = open('Data/dist_terminus.csv', 'r')
