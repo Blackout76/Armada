@@ -1,21 +1,25 @@
-import os, sys, copy
-lib_path = os.path.abspath(os.path.join('..', '..', '..', 'lib'))
-sys.path.append(lib_path)
+# import os, sys, copy
+# lib_path = os.path.abspath(os.path.join('..', '..', '..', 'lib'))
+# sys.path.append(lib_path)
+# from Data.data import *
 from Data.data import *
+from Fourmis.toolsFourmis import *
+from time import *
+from math import *
+from copy import *
 
+# def updateList(liste1, liste2):
+# 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
+# 	copyL1 = copy.deepcopy(liste1)
+# 	copyL2 = copy.deepcopy(liste2)
 
+# 	for i in range(len(copyL2)):
+# 		for j in range(len(copyL1)):
+# 			if copyL2[i] == copyL1[j]:
+# 				del copyL1[j]
+# 				break
+# 	return copyL1	
 
-def updateList(liste1, liste2):
-	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
-	copyL1 = copy.deepcopy(liste1)
-	copyL2 = copy.deepcopy(liste2)
-
-	for i in range(len(copyL2)):
-		for j in range(len(copyL1)):
-			if copyL2[i] == copyL1[j]:
-				del copyL1[j]
-				break
-	return copyL1	
 
 links = generateLiaisons()
 travels = generateTravels(links)
