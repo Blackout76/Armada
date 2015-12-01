@@ -3,6 +3,9 @@ from Travel import *
 ##############################################
 #####      GENERATION TRAVELS LINKS     ######
 ##############################################
+
+
+# generate all the travels with dist and time
 def generateTravels(links):
 	file = open('Data/horaires.csv', 'r')
 	data = file.readlines()
@@ -34,6 +37,7 @@ def generateTravels(links):
 	generateLinksTravels(travels,links)
 	return travels
 
+# intern function contruct travels of current line
 def generateTravelsOfLine(nameline,terminus,dist):
 	travels = []
 	travelCount = 0;
@@ -69,6 +73,7 @@ def generateLinksTravels(travels,links):
 			if not travel == travelTMP:
 				travel.isTravelCompatible(travelTMP,True,links)
 
+#base function open file for parsing
 def generateLiaisons():
 	file = open('Data/terminus.csv', 'r')
 	fileDist = open('Data/dist_terminus.csv', 'r')
