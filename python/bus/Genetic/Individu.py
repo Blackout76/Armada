@@ -26,4 +26,9 @@ class Individu(object):
 					error = True
 			if not error:
 				self.score += 1
+	def computeScore3(self,incomp):
+		self.score = 0
+		for i in range(len(self.adn)):
+			if not self.adn[i] in incomp[i]:
+				self.score += 1
 	

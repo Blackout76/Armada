@@ -10,7 +10,7 @@ from math import *
 ##############################################
 def evalPopulation(population,incomp):
 	for i in range(len(population)):
-		population[i].computeScore2(incomp)
+		population[i].computeScore3(incomp)
 		
 
 
