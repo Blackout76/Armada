@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 20
-iteration = 1
-child_population_size = 75
+population_size = 5
+iteration = 5
+child_population_size = 3
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -23,8 +23,6 @@ adnBase = generateBasicADN(travels)
 nbBus = 100
 population = createPopulation(population_size, adnBase,nbBus)
 evalPopulation(travels,population,links)
-for individu in population:
-	print individu.score
 
 
 
@@ -44,14 +42,22 @@ for i in range(len(bus)):
 
 # print'###################'
 
-#for i in range(iteration):
-	#evalPopulation(population,score_objectif)
-	# populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
-	# populationChild = generateChildren(populationParent,adn_croisement_count)
-	# population = insertInPopulation(population,populationChild,population_size,score_objectif)
+for i in range(iteration):
+	print 'Generation: ' + str(i)
+	print '		Evaluation  ...'
+	evalPopulation(travels,population,links)
+	print '		Selection parents ...'
+	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
+	print '		Generation enfants ...'
+	populationChild = generateChildren(populationParent,adn_croisement_count)
+	print '		Construction nouvelle population ...'
+	population = insertInPopulation(travels,links,population,populationChild,population_size,score_objectif)
+	print 'Score:'
+	print '		min: ' + str(population[population_size-1].score) 
+	print '		max: ' + str(population[0].score) 
 
 #printPopulation(population)
-"""
+
 print 'Results:'
 print '		population size: ' + str(population_size)
 print '		population children size: ' + str(child_population_size)
@@ -60,6 +66,4 @@ print '		count of croisement ADN: ' + str(adn_croisement_count)
 print '		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation'
 print 'Score:'
 print '		min: ' + str(population[population_size-1].score) 
-print '		max: ' + str(population[0].score) 
-print '		best adn' + str(population[population_size-1].adn.genes)
-"""
+print '		max: ' + str(population[0].score)

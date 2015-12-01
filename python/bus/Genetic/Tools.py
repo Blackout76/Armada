@@ -81,7 +81,7 @@ def createPopulation(populationSize,adnBase,nbBus):
 		population.append(createIndividu(adnBase,nbBus))
 	return population
 
-def insertInPopulation(population,populationChild,populationSize,scoreObjectif):
+def insertInPopulation(travels,links,population,populationChild,populationSize,scoreObjectif):
 	newPopulation = []
 	# Compose the new population
 	for i in range(len(population)):
@@ -89,8 +89,8 @@ def insertInPopulation(population,populationChild,populationSize,scoreObjectif):
 	for i in range(len(populationChild)):
 		newPopulation.append(mutate(populationChild[i]))
 	# Eval the new population
-	evalPopulation(newPopulation,scoreObjectif)
-	# Sort the new population
+	evalPopulation(travels,newPopulation,links)
+	# Sort the new population>
 	newPopulation.sort(key=lambda x: x.score, reverse=True)
 	# Remove bad individu
 	for i in range(len(newPopulation)-populationSize):
@@ -101,7 +101,7 @@ def insertInPopulation(population,populationChild,populationSize,scoreObjectif):
 def mutate(individu):
 	if (randint(0,10000)/10000) < 0.075:
 		mutateIndex = randint(0,len(individu.adn.genes)-1)
-		individu.adn.genes[mutateIndex] = randint(0,1)
+		individu.adn.genes[mutateIndex] = randint(0,100)
 	return individu
 
 def createIndividu(adnBase,nbBus):
