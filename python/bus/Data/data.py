@@ -1,4 +1,5 @@
 from Travel import *
+from time import *
 
 ##############################################
 #####      GENERATION TRAVELS LINKS     ######
@@ -102,3 +103,9 @@ def generateLiaisons():
 				for j in range(len(line)-1):
 					links[str(terminusName[j+1]+':'+line[0])] = TravelLink(lineDist[j+1],line[j+1])
 	return links
+
+def saveIndividu (messageLines):
+	file = open('Data/Save/individu_' + str(time()) +'.csv', 'w')
+	for l in messageLines:
+		file.write(l)
+		file.write("\n")
