@@ -8,9 +8,20 @@ from math import *
 ##############################################
 #####          GENETIC FUNCTION         ######
 ##############################################
-def evalPopulation(population,scoreObjectif):
+def evalPopulation(travels,population,links):
 	for i in range(len(population)):
-		population[i].score = abs(scoreObjectif - int(population[i].adn.toString(), 2))
+		population[i].score = computeScore(travels,population[i],links)
+
+def computeScore(travels,individu,links):
+	score = 0
+	for i in range(len(individu.adn.genes)):
+		error = False
+		for j in range(len(individu.adn.genes)):
+			if individu.adn.genes[i] == individu.adn.genes[j] and travels[j] in travels[i].travelUncompatible:
+				error = True
+		if not error:
+			score += 1
+	return score
 
 def selectPopulationParents(type,population,child_population_size,parents_count_min,parents_count_max):
 	if type == 'alea':
