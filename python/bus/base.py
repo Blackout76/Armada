@@ -11,6 +11,7 @@ for t in travels:
 	print t.toString()
 
 #show links
-for l in links:
-	print l.get('linkName') + ' ' + l.get('link').toString()
+print links
+#get a links
+print 'Link : ' + str('T22' + ':' + 'T23') +' >>>  time:  ' + links.get('T22:T23').time + '   dist: ' + links.get('T22:T23').dist
 

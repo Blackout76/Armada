@@ -75,7 +75,7 @@ def generateLiaisons():
 	data = file.readlines()
 	dataDist = fileDist.readlines()
 	terminusName = []
-	links = []
+	links = {}
 	for i in range(len(data)):
 		if not data[i] == "":
 			if i==0:
@@ -84,5 +84,5 @@ def generateLiaisons():
 				line = data[i][:-1].split(',')
 				lineDist = dataDist[i][:-1].split(',')
 				for j in range(len(line)-1):
-					links.append(dict({'linkName' : str(terminusName[j+1]+':'+line[0]),'link': TravelLink(lineDist[j+1],line[j+1])}))
+					links[str(terminusName[j+1]+':'+line[0])] = TravelLink(lineDist[j+1],line[j+1])
 	return links
