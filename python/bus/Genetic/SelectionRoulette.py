@@ -19,8 +19,8 @@ class Roulette():
 
 
 	def randomId(self):
-		val = randint(0,1000)/1000.0
-		for i in range(len(self.items)):
+		val = randint(0,1000)/10.0
+		for i in range(len(self.items)): 
 			if val >= self.items[i].score:
 				return self.items[i].id
 		return 0;
