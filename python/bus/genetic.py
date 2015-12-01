@@ -25,7 +25,7 @@ print len(travels[0].travelUncompatible)
 
 timeStart = time()
 adnBase = generateBasicADN(travels)
-nbBus = 100
+nbBus = 50
 population = createPopulation(population_size, adnBase,nbBus)
 
 evalPopulation(population,incomp)
@@ -60,8 +60,8 @@ for i in range(iteration):
 	print '		Construction nouvelle population ...'
 	population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
 	print 'Score:'
-	print '		min: ' + str(population[population_size-1].score) 
-	print '		max: ' + str(population[0].score) 
+	print '		max: ' + str(population[population_size-1].score) 
+	print '		min: ' + str(population[0].score) 
 
 #printPopulation(population)
 
