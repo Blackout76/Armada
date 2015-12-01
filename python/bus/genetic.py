@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 5
+population_size = 50
 iteration = 5
-child_population_size = 3
+child_population_size = 30
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -17,12 +17,17 @@ adn_croisement_count = 1
 
 links = generateLiaisons()
 travels = generateTravels(links)
+incomp = generateIncomp(travels)
+
+print incomp
+
+print len(travels[0].travelUncompatible)
 
 timeStart = time()
 adnBase = generateBasicADN(travels)
 nbBus = 100
 population = createPopulation(population_size, adnBase,nbBus)
-evalPopulation(travels,population,links)
+evalPopulation(population,incomp)
 
 
 
@@ -45,13 +50,13 @@ for i in range(len(bus)):
 for i in range(iteration):
 	print 'Generation: ' + str(i)
 	print '		Evaluation  ...'
-	evalPopulation(travels,population,links)
+	evalPopulation(population,incomp)
 	print '		Selection parents ...'
 	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
 	print '		Generation enfants ...'
 	populationChild = generateChildren(populationParent,adn_croisement_count)
 	print '		Construction nouvelle population ...'
-	population = insertInPopulation(travels,links,population,populationChild,population_size,score_objectif,nbBus)
+	population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
 	print 'Score:'
 	print '		min: ' + str(population[population_size-1].score) 
 	print '		max: ' + str(population[0].score) 

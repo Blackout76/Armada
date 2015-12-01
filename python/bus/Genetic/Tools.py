@@ -8,20 +8,12 @@ from math import *
 ##############################################
 #####          GENETIC FUNCTION         ######
 ##############################################
-def evalPopulation(travels,population,links):
+def evalPopulation(population,incomp):
 	for i in range(len(population)):
-		population[i].score = computeScore(travels,population[i],links)
+		population[i].computeScore2(incomp)
+		
 
-def computeScore(travels,individu,links):
-	score = 0
-	for i in range(len(individu.adn)):
-		error = False
-		for j in range(len(individu.adn)):
-			if individu.adn[i] == individu.adn[j] and travels[j] in travels[i].travelUncompatible:
-				error = True
-		if not error:
-			score += 1
-	return score
+
 
 def selectPopulationParents(type,population,child_population_size,parents_count_min,parents_count_max):
 	if type == 'alea':
@@ -81,7 +73,7 @@ def createPopulation(populationSize,adnBase,nbBus):
 		population.append(createIndividu(adnBase,nbBus))
 	return population
 
-def insertInPopulation(travels,links,population,populationChild,populationSize,scoreObjectif,nbBus):
+def insertInPopulation(incomp,population,populationChild,populationSize,scoreObjectif,nbBus):
 	newPopulation = []
 	# Compose the new population
 	for i in range(len(population)):
@@ -89,7 +81,7 @@ def insertInPopulation(travels,links,population,populationChild,populationSize,s
 	for i in range(len(populationChild)):
 		newPopulation.append(mutate(populationChild[i],nbBus))
 	# Eval the new population
-	evalPopulation(travels,newPopulation,links)
+	evalPopulation(newPopulation,incomp)
 	# Sort the new population>
 	newPopulation.sort(key=lambda x: x.score, reverse=True)
 	# Remove bad individu
@@ -122,4 +114,17 @@ def generateBasicADN(travels):
 	print 'Total genes:' + str(len(adn))
 	return adn
 
+
+
+def generateIncomp(travels):
+	incomp = []
+	for i in range(len(travels)):
+		incomp.append([])
+		error = False
+		for j in range(len(travels)):
+			if travels[j] in travels[i].travelUncompatible:
+				incomp[i].append(j)
+				
+	return incomp
+	
 
