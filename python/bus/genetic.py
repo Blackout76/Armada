@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 50
+population_size = 100
 iteration = 50000
-child_population_size = 45
+child_population_size = 30
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -60,8 +60,11 @@ for i in range(iteration):
 	print '		Construction nouvelle population ...'
 	population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
 	print 'Score:'
-	print '		min: ' + str(population[population_size-1].score) 
-	print '		max: ' + str(population[0].score) 
+	print '		max: ' + str(population[population_size-1].score) 
+	print '		min: ' + str(population[0].score) 
+	if population[population_size-1].score == 539:
+		print 'FOUNDDDDDDDDDDDDDDDDDDDDDDDDdd'
+		break
 
 #printPopulation(population)
 
@@ -72,5 +75,5 @@ print '		selection: ' + selection_type
 print '		count of croisement ADN: ' + str(adn_croisement_count)
 print '		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation'
 print 'Score:'
-print '		min: ' + str(population[population_size-1].score) 
-print '		max: ' + str(population[0].score)
+print '		max: ' + str(population[population_size-1].score) 
+print '		min: ' + str(population[0].score)
