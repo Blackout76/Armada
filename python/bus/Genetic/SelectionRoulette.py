@@ -25,7 +25,7 @@ class Roulette():
 		if self.items[0].score == self.items[len(self.items)-1].score:
 			return self.items[randint(0,len(self.items)-1)].id
 		else:
-			val = randint(0,1000)/10.0
+			val = randint(0,1000000)/10000.0
 			for i in range(len(self.items)): 
 				if val <= self.items[i].score:
 					return self.items[i].id

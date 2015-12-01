@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 100
+population_size = 50
 iteration = 50000
-child_population_size = 30
+child_population_size = 70
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -31,41 +31,34 @@ population = createPopulation(population_size, adnBase,nbBus)
 evalPopulation(population,incomp)
 
 
-
-"""
-bus = []
-for i in range(nbBus+1):
-	bus.append(0)
-
-for j in range(len(population)):
-	for k in range(len(population[j].adn.genes)):
-		bus[population[j].adn.genes[k]] += 1
-
-for i in range(len(bus)):
-	print 'Bus ' + str(i) + ' = ' + str(bus[i]*1.0/population_size)
-"""
-
-
-# print'###################'
-
-evalPopulation(population,incomp)
-
 for i in range(iteration):
 	print 'Generation: ' + str(i)
 	
 	print '		Selection parents ...'
 	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
 	print '		Generation enfants ...'
-	populationChild = generateChildren(populationParent,adn_croisement_count)
+	populationChild = generateChildren(incomp,populationParent,adn_croisement_count)
 	print '		Construction nouvelle population ...'
 	population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
 	print 'Score:'
 	print '		max: ' + str(population[population_size-1].score) 
 	print '		min: ' + str(population[0].score) 
-	if population[population_size-1].score == 539:
+	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
 		print 'FOUNDDDDDDDDDDDDDDDDDDDDDDDDdd'
 		break
 
+
+		
+total = 0
+for j in range(nbBus):
+	nbTrajetbus = 0
+	for i in population[0].adn:
+		if i == j:
+			nbTrajetbus += 1
+	total += nbTrajetbus
+	print 'Nb trajet pour le bus ' + str(j) +' : ' + str(nbTrajetbus)
+
+print 'Nb trajet totale:' + str(total)
 #printPopulation(population)
 
 print 'Results:'
