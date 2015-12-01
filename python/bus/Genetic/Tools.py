@@ -91,7 +91,7 @@ def insertInPopulation(travels,links,population,populationChild,populationSize,s
 	# Eval the new population
 	evalPopulation(travels,newPopulation,links)
 	# Sort the new population>
-	newPopulation.sort(key=lambda x: x.score, reverse=True)
+	newPopulation.sort(key=lambda x: x.score, reverse=False)
 	# Remove bad individu
 	for i in range(len(newPopulation)-populationSize):
 		del newPopulation[0]

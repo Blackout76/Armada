@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 5
+population_size = 100
 iteration = 5
-child_population_size = 3
+child_population_size = 75
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -22,7 +22,6 @@ timeStart = time()
 adnBase = generateBasicADN(travels)
 nbBus = 100
 population = createPopulation(population_size, adnBase,nbBus)
-evalPopulation(travels,population,links)
 
 
 
