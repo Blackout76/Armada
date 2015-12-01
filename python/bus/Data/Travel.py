@@ -6,6 +6,7 @@ class Travel(object):
 		self.endPoint = endPoint;
 		self.travelBefore = []
 		self.travelAfter = []
+		self.travelUncompatible = []
 
 	def addTravelBefore(self,travel):
 		if not travel in self.travelBefore:
@@ -24,7 +25,19 @@ class Travel(object):
 		# -1 if travel can be do before self 		ex: self.travelBefore.append(travel)
 		# 0  if travel is in the same time
 		# 1  if travel can be do after self 		ex: self.travelAfter.append(travel)
-		return 0
+
+		if int(self.endPoint.time.hour)*60 + int(self.endPoint.time.min)+ int(links.get(self.endPoint.name+':'+travel.startPoint.name).time)+5 < (int(travel.startPoint.time.hour)*60 + int(travel.startPoint.time.min)) : 
+			if addToList:
+				self.travelAfter.append(travel)
+			return 1
+		elif int(self.startPoint.time.hour)*60 + int(self.startPoint.time.min) > (int(travel.endPoint.time.hour)*60 + int(travel.endPoint.time.min)) +int(links.get(travel.endPoint.name+':'+self.startPoint.name).time)+5 : 
+			if addToList:
+				self.travelBefore.append(travel)
+			return -1
+		else :
+			if addToList:
+				self.travelUncompatible.append(travel)
+			return 0
 
 	def toString (self):
 		return 'ligne:' + self.lineName + '   start:' + self.startPoint.name +'(' + self.startPoint.time.hour + ':' + self.startPoint.time.min + ')'+ '   end:' + self.endPoint.name +'(' + self.endPoint.time.hour + ':' + self.endPoint.time.min + ')'
