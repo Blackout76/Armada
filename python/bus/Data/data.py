@@ -11,15 +11,22 @@ def generateTravels(links):
 	data = file.readlines()
 	travels = []
 	currentLine = None
+	lastLine = None
+	
 	currentTerminus = []
 	currentDist = None
 	for line in data:
 		line = line[:-1]
 		if "ligne" in line:
 			if len(currentTerminus) >0:
-				travelsLine = generateTravelsOfLine(currentLine,currentTerminus,currentDist)
+				if currentLine == lastLine:
+					lineType = 'r'
+				else:
+					lineType = 'a'
+				travelsLine = generateTravelsOfLine(currentLine,currentTerminus,currentDist,lineType)
 				for geneIndex in range(len(travelsLine)):
 					travels.append(travelsLine[geneIndex])
+				lastLine = currentLine
 			currentTerminus = []
 			currentDist = None
 			# print "New line:" + str(currentLine)
@@ -29,7 +36,11 @@ def generateTravels(links):
 		else:
 			currentDist = line
 
-	travelsLine = generateTravelsOfLine(currentLine,currentTerminus,currentDist)
+	if currentLine == lastLine:
+		lineType = 'r'
+	else:
+		lineType = 'a'
+	travelsLine = generateTravelsOfLine(currentLine,currentTerminus,currentDist,lineType)
 	for geneIndex in range(len(travelsLine)):
 		travels.append(travelsLine[geneIndex])
 
@@ -38,7 +49,7 @@ def generateTravels(links):
 	return travels
 
 # intern function contruct travels of current line
-def generateTravelsOfLine(nameline,terminus,dist):
+def generateTravelsOfLine(nameline,terminus,dist,lineType):
 	travels = []
 	travelCount = 0;
 	terminusDecoded = []
@@ -64,7 +75,7 @@ def generateTravelsOfLine(nameline,terminus,dist):
 
 		startPoint = TravelPoint( terminusDecoded[terminusIndexStart][0], TravelTime(terminusDecoded[terminusIndexStart][i+1].split(':')) )
 		endPoint = TravelPoint( terminusDecoded[terminusIndexEnd][0], TravelTime(terminusDecoded[terminusIndexEnd][i+1].split(':'))  )
-		travels.append(Travel(nameline,startPoint,endPoint,distDecoded[i+1]))
+		travels.append(Travel(nameline, lineType, i, startPoint,endPoint,distDecoded[i+1]))
 	return travels
 
 def generateLinksTravels(travels,links):

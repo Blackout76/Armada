@@ -19,6 +19,10 @@ print 'loading ...'
 links = generateLiaisons()
 travels = generateTravels(links)
 incomp = generateIncomp(travels)
+print travels[33].lineType
+print travels[33].lineNumber
+print travels[53].lineType
+print travels[53].lineNumber
 
 #print incomp
 #print len(travels[0].travelUncompatible)

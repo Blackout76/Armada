@@ -1,6 +1,8 @@
 class Travel(object):
-	def __init__(self, lineName, startPoint, endPoint, dist):
+	def __init__(self, lineName, lineType, lineNumber, startPoint, endPoint, dist):
 		self.lineName = lineName
+		self.lineType = lineType
+		self.lineNumber = lineNumber
 		self.dist = dist
 		self.startPoint = startPoint;
 		self.endPoint = endPoint;
