@@ -111,7 +111,7 @@ def mutate(individu,nbBus):
 def createIndividu(adnBase,nbBus):
 	gene = []
 	for i in range(len(adnBase)):
-		gene.append(randint(0,nbBus))
+		gene.append(randint(0,nbBus-1))
 	return Individu(gene)
 
 def printPopulation(population):
