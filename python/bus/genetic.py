@@ -7,8 +7,8 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 50
-iteration = 50000
+population_size = 50000
+iteration = 1
 child_population_size = 70
 parents_count_min = 2
 parents_count_max = 2
@@ -48,17 +48,26 @@ for i in range(iteration):
 		break
 
 
-		
+
 total = 0
-for j in range(nbBus):
+lines = []
+for j in range(nbBus+1):
+	print'###>'
+	lines.append('###>')
 	nbTrajetbus = 0
-	for i in population[0].adn:
-		if i == j:
+	for i in range(len(population[0].adn)):
+		if population[0].adn[i] == j:
+			print'	' + travels[i].toString()
+			lines.append(travels[i].toString())
 			nbTrajetbus += 1
 	total += nbTrajetbus
-	print 'Nb trajet pour le bus ' + str(j) +' : ' + str(nbTrajetbus)
+	print 'Nb trajet totale pour le bus ' + str(j) +' : ' + str(nbTrajetbus)
+	lines.append('Nb trajet totale pour le bus ' + str(j) +' : ' + str(nbTrajetbus))
 
+lines.append('###>  Result   <###')
+lines.append('Nb trajet totale:' + str(total))
 print 'Nb trajet totale:' + str(total)
+saveIndividu(lines)
 #printPopulation(population)
 
 print 'Results:'
