@@ -77,13 +77,13 @@ def insertInPopulation(incomp,population,populationChild,populationSize,scoreObj
 	newPopulation = []
 	# Compose the new population
 	for i in range(len(population)):
-		newPopulation.append(mutate(population[i],nbBus))
+		newPopulation.append(population[i])
 	for i in range(len(populationChild)):
 		newPopulation.append(mutate(populationChild[i],nbBus))
 	# Eval the new population
 	evalPopulation(newPopulation,incomp)
 	# Sort the new population>
-	newPopulation.sort(key=lambda x: x.score, reverse=True)
+	newPopulation.sort(key=lambda x: x.score, reverse=False)
 	# Remove bad individu
 	for i in range(len(newPopulation)-populationSize):
 		del newPopulation[0]

@@ -17,7 +17,6 @@ class Individu(object):
 					error = True
 			if not error:
 				self.score += 1
-	
 	def computeScore2(self,incomp):
 		self.score = 0
 		for i in range(len(self.adn)):
@@ -27,6 +26,4 @@ class Individu(object):
 					error = True
 			if not error:
 				self.score += 1
-				
-				
-				
+	

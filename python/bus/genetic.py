@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 50
-iteration = 5
-child_population_size = 30
+population_size = 100
+iteration = 50
+child_population_size = 70
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
