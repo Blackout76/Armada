@@ -14,10 +14,10 @@ def evalPopulation(travels,population,links):
 
 def computeScore(travels,individu,links):
 	score = 0
-	for i in range(len(individu.adn.genes)):
+	for i in range(len(individu.adn)):
 		error = False
-		for j in range(len(individu.adn.genes)):
-			if individu.adn.genes[i] == individu.adn.genes[j] and travels[j] in travels[i].travelUncompatible:
+		for j in range(len(individu.adn)):
+			if individu.adn[i] == individu.adn[j] and travels[j] in travels[i].travelUncompatible:
 				error = True
 		if not error:
 			score += 1
@@ -64,15 +64,15 @@ def selectPopulationParents_alea(type,population,child_population_size,parents_c
 def generateChildren(populationParent,adnCroisementCount):
 	children = []
 	for i in range(len(populationParent)):
-		croisementIndex = randint(1,len(populationParent[i][0].adn.genes)-1)
+		croisementIndex = randint(1,len(populationParent[i][0].adn)-1)
 		childGenes = []
-		for j in range(len(populationParent[i][0].adn.genes)):
+		for j in range(len(populationParent[i][0].adn)):
 			if j < croisementIndex :
-				childGenes.append(populationParent[i][0].adn.genes[j])
+				childGenes.append(populationParent[i][0].adn[j])
 			else :
-				childGenes.append(populationParent[i][1].adn.genes[j])
+				childGenes.append(populationParent[i][1].adn[j])
 		# print str(i) + '>>>' + str(childGenes) + '(' + str(croisementIndex) + ')'
-		children.append(Individu(ADN(childGenes)))
+		children.append(Individu(childGenes))
 	return children
 
 def createPopulation(populationSize,adnBase,nbBus):
@@ -81,13 +81,13 @@ def createPopulation(populationSize,adnBase,nbBus):
 		population.append(createIndividu(adnBase,nbBus))
 	return population
 
-def insertInPopulation(travels,links,population,populationChild,populationSize,scoreObjectif):
+def insertInPopulation(travels,links,population,populationChild,populationSize,scoreObjectif,nbBus):
 	newPopulation = []
 	# Compose the new population
 	for i in range(len(population)):
-		newPopulation.append(mutate(population[i]))
+		newPopulation.append(mutate(population[i],nbBus))
 	for i in range(len(populationChild)):
-		newPopulation.append(mutate(populationChild[i]))
+		newPopulation.append(mutate(populationChild[i],nbBus))
 	# Eval the new population
 	evalPopulation(travels,newPopulation,links)
 	# Sort the new population>
@@ -98,17 +98,17 @@ def insertInPopulation(travels,links,population,populationChild,populationSize,s
 
 	return newPopulation
 
-def mutate(individu):
+def mutate(individu,nbBus):
 	if (randint(0,10000)/10000) < 0.075:
-		mutateIndex = randint(0,len(individu.adn.genes)-1)
-		individu.adn.genes[mutateIndex] = randint(0,100)
+		mutateIndex = randint(0,len(individu.adn)-1)
+		individu.adn[mutateIndex] = randint(0,nbBus)
 	return individu
 
 def createIndividu(adnBase,nbBus):
 	gene = []
 	for i in range(len(adnBase)):
 		gene.append(randint(0,nbBus))
-	return Individu(ADN(gene))
+	return Individu(gene)
 
 def printPopulation(population):
 	for i in range(len(population)):

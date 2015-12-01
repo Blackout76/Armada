@@ -51,7 +51,7 @@ for i in range(iteration):
 	print '		Generation enfants ...'
 	populationChild = generateChildren(populationParent,adn_croisement_count)
 	print '		Construction nouvelle population ...'
-	population = insertInPopulation(travels,links,population,populationChild,population_size,score_objectif)
+	population = insertInPopulation(travels,links,population,populationChild,population_size,score_objectif,nbBus)
 	print 'Score:'
 	print '		min: ' + str(population[population_size-1].score) 
 	print '		max: ' + str(population[0].score) 

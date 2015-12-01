@@ -1,4 +1,4 @@
-class ADN(object):
+'''class ADN(object):
 	def __init__(self, arg):
 		self.genes = arg
 
@@ -6,5 +6,5 @@ class ADN(object):
 		s = ''
 		for i in range(len(self.genes)):
 			s += str(self.genes[i])
-		return s
+		return s'''
 		
