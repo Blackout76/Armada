@@ -7,9 +7,9 @@ from math import *
 
 
 score_objectif = 23333.0000001
-population_size = 300
-iteration = 50
-child_population_size = 280
+population_size = 50
+iteration = 50000
+child_population_size = 45
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -48,10 +48,11 @@ for i in range(len(bus)):
 
 # print'###################'
 
+evalPopulation(population,incomp)
+
 for i in range(iteration):
 	print 'Generation: ' + str(i)
-	print '		Evaluation  ...'
-	evalPopulation(population,incomp)
+	
 	print '		Selection parents ...'
 	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
 	print '		Generation enfants ...'

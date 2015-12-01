@@ -75,13 +75,14 @@ def createPopulation(populationSize,adnBase,nbBus):
 
 def insertInPopulation(incomp,population,populationChild,populationSize,scoreObjectif,nbBus):
 	newPopulation = []
-	# Compose the new population
-	for i in range(len(population)):
-		newPopulation.append(population[i])
+	
 	for i in range(len(populationChild)):
 		newPopulation.append(mutate(populationChild[i],nbBus))
 	# Eval the new population
 	evalPopulation(newPopulation,incomp)
+	# Compose the new population
+	for i in range(len(population)):
+		newPopulation.append(population[i])
 	# Sort the new population>
 	newPopulation.sort(key=lambda x: x.score, reverse=False)
 	# Remove bad individu
