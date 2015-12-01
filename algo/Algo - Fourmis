@@ -1,0 +1,36 @@
+Debut
+	
+	LT = Liste chronologique de tous les voyages
+
+	Tantque LT n'est pas vide
+
+		Pour t = 1, …, tmax
+
+			Pour chaque fourmi k = 1, …, m
+
+				Creer un tableau Trajet Tk
+				CLT = Copie de LT
+
+				Choisir le premier voyage de la liste.
+
+				Tantque CLT n'est pas vide
+					Choisir un voyage, dans la liste selon la règle de choix.
+					On ajout le voyage au trajet Tk
+					On supprime le voyage de CLT et les voyages précedents s'il y a.
+				Fin Tant que
+
+				Déposer une piste sur le trajet Tk(t).		// Chemin inverse & depot de pheromones total(pt) = 1/D sur chaque branche
+
+			Fin Pour
+
+		Évaporer un pourcentage des phéromones.			
+
+		Fin Pour
+
+		TB[i] Creation d'un trajet de buss = Tk;
+
+		UPDATE de LT = LT - Tk;
+
+	Fin Tantque
+
+Fin
