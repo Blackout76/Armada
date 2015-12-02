@@ -76,7 +76,7 @@ def createPopulation(populationSize,adnBase,nbBus):
 		population.append(createIndividu(adnBase,nbBus))
 	return population
 
-def insertInPopulation(incomp,travels,links,population,populationChild,populationSize,scoreObjectif,nbBus):
+def insertInPopulation(incomp,travels,links,population,populationChild,populationSize,nbBus):
 	newPopulation = []
 	
 	for i in range(len(populationChild)):
