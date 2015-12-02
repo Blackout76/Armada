@@ -6,7 +6,7 @@ from time import *
 from math import *
 import sys
 
-nbBus = 100
+nbBus = 120
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
 	print "Bus number : " + int(sys.argv[1])
@@ -37,23 +37,24 @@ population = createPopulation(population_size, adnBase,nbBus)
 
 evalPopulation(population,incomp,travels,links,nbBus)
 
-
+isValidPop = False
 for i in range(iteration):
 	print 'Generation: ' + str(i)
 	
 	print '		Selection parents ...'
-	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
+	populationParent = selectPopulationParents(isValidPop,selection_type,population,child_population_size,parents_count_min,parents_count_max)
 	print '		Generation enfants ...'
-	populationChild = generateChildren(incomp,populationParent,adn_croisement_count)
+	populationChild = generateChildren(isValidPop,incomp,travels,links,nbBus,populationParent,adn_croisement_count)
 	print '		Construction nouvelle population ...'
-	population = insertInPopulation(incomp,travels,links,population,populationChild,population_size,nbBus)
-	print 'Score:'
-	print '		max: ' + str(population[population_size-1].score) 
-	print '		min: ' + str(population[0].score) 
-	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
-		print 'FOUNDDDDDDDDDDDDDDDDDDDDDDDDdd'
+	population = insertInPopulation(isValidPop,incomp,travels,links,population,populationChild,population_size,nbBus)
+	print '		Score:'
+	print '			max: ' + str(population[population_size-1].score) + '	' + str(population[population_size-1].scoreTime) + '	'  + str(population[population_size-1].scoreDist)  
+	print '			min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist:'  + str(population[0].scoreDist)  
+	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539 and not isValidPop:
 		evalPopulation(population,incomp,travels,links,nbBus)
-		break
+		isValidPop = True
+	else:
+		isValidPop = False
 
 
 
@@ -91,8 +92,8 @@ lines.append('		executed time: ' + str(round((time() - timeStart)*100)/100) + 's
 print 'Score:'
 lines.append('Score:')
 print '		max: ' + str(population[population_size-1].score) + '	' + str(population[population_size-1].scoreTime) + '	'  + str(population[population_size-1].scoreDist) 
-lines.append('		max: ' + str(population[population_size-1].score))
-print '		min: ' + str(population[0].score) + '	' + str(population[0].scoreTime) + '	'  + str(population[0].scoreDist) 
-lines.append('		min: ' + str(population[0].score))
+lines.append('		max: ' + str(population[population_size-1].score) + '	' + str(population[population_size-1].scoreTime) + '	'  + str(population[population_size-1].scoreDist) )
+print '		min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist:'  + str(population[0].scoreDist) 
+lines.append('		min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist'  + str(population[0].scoreDist))
 saveIndividu('test_'+str(nbBus),lines)
 #nbBus -= 5

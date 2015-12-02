@@ -1,37 +1,33 @@
 from random import *
 
 class Roulette():
-	def __init__(self):
+	def __init__(self,reverse):
 		self.items = []
+		self.reverse = reverse
+		self.total = 0.0
 
 	def addItem(self,item_id,item_score):
+		if self.reverse:
+			item_score = 1.0 / item_score * 1000000.0
 		self.items.append(RouletteItem(item_id,item_score))
 
 	def load(self):
-		total = 0.0;
+		self.total = 0.0;
 		for i in range(len(self.items)):
-			total = total + (1.0 / self.items[i].score);
-			self.items[i].score = 1.0 / self.items[i].score
+			self.total += self.items[i].score;
 
 		scorePrevious = 0
 		for i in range(len(self.items)):
-			if total > 0:
-				self.items[i].score = scorePrevious + self.items[i].score * 100.0 / total
-				scorePrevious = self.items[i].score
-		self.items.sort(key=lambda x: x.score, reverse=False)
-
+			self.items[i].score = scorePrevious + self.items[i].score
+			scorePrevious = self.items[i].score
 
 	def randomId(self):
-		if self.items[0].score == self.items[len(self.items)-1].score:
-			return self.items[randint(0,len(self.items)-1)].id
-		else:
-			val = randint(0,1000000)/10000.0
-			for i in range(len(self.items)): 
-				if val <= self.items[i].score:
-					return self.items[i].id
-
-			print'g,eeeeeeeeee' + str(val)
-			return 0
+		val = randint(0,self.total)
+		for i in range(len(self.items)): 
+			if val <= self.items[i].score:
+				return self.items[i].id
+		print 'gNEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
+		return 0
 
 class RouletteItem():
 	def __init__(self, item_id,item_score):
