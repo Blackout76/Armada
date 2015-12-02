@@ -1,29 +1,16 @@
 # import os, sys, copy
 # lib_path = os.path.abspath(os.path.join('..', '..', '..', 'lib'))
 # sys.path.append(lib_path)
-# from Data.data import *
+
+import copy
+
 from Data.data import *
 from Fourmis.toolsFourmis import *
-from time import *
-from math import *
-from copy import *
 
-# def updateList(liste1, liste2):
-# 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
-# 	copyL1 = copy.deepcopy(liste1)
-# 	copyL2 = copy.deepcopy(liste2)
-
-# 	for i in range(len(copyL2)):
-# 		for j in range(len(copyL1)):
-# 			if copyL2[i] == copyL1[j]:
-# 				del copyL1[j]
-# 				break
-# 	return copyL1	
-
+###########################################
 
 links = generateLiaisons()
 travels = generateTravels(links)
-
 
 listeTrajets=[1,2,3,4,5,6,7,8,9]
 print listeTrajets
@@ -38,28 +25,36 @@ majTrajets = updateList(majTrajets, listeTrajetEffectuer)
 print majTrajets
 
 
+##############################################
+#####             Debut ALGO	         #####
+##############################################
+
+ListFake = [1,2,3]
+ListTotal = copy.deepcopy(ListFake)
+nbIteration = 2
+nbFourmis = 500
+
+while len(ListTotal)!=0:
+	for iteration in xrange(1,nbIteration):
+		for fourmis in xrange(1, nbFourmis):
+
+			tabTF = []
+			copyLT = copy.deepcopy(ListTotal)
+			positionActuel = 0
+			while len(copyLT)!=0:
+				#fonction choix du chemin a faire, simulation :
+				tabTF.append(copyLT[positionActuel])
+				print tabTF
+				copyLT = updateList(copyLT,tabTF)
+				pass
+			#print "iteration: " + str(iteration) + " fourmis: " + str(fourmis)
+			pass
+		pass
+	ListTotal = updateList(ListTotal,tabTF)
+	pass
+
+print "liste total " 
+print ListTotal
 
 
-# def chooseTravel(pointActuel, listeVoisins):
-	
-# 	pheromone=[]
-# 	visibilite=[]
-# 	total = 0
 
-# 	for i in range(len(listeVoisins)):
-# 		pheromone[i] = getPheromone()
-# 		visibilite[i] = getVisibilite(pointActuel, listeVoisins[i])
-# 		total = total + pheromone[i] * visibilite[i]
-
-# 	probChoisir=[]
-# 	probMax = 0
-# 	choixVoisin = 0
-
-# 	for i in range(len(listeVoisins)):
-# 		probChoisir[i] = (pheromone[i] * visibilite[i]) / total 
-		
-# 		if probChoisir[i] > probMax:
-# 			probMax=probChoisir[i]
-# 			choixVoisin = i
-
-# 	return choixVoisin
