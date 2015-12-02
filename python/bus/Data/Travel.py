@@ -53,6 +53,8 @@ class TravelTime(object):
 	def __init__(self, timeSplit):
 		self.hour = timeSplit[0]
 		self.min = timeSplit[1]
+	def inMin():
+		return int(self.hour) * 60 + self.min
 		
 class TravelLink(object):
 	def __init__(self,dist,time):
