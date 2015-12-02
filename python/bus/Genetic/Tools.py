@@ -66,17 +66,7 @@ def generateChildren(incomp,populationParent,adnCroisementCount):
 			childGenes = []
 			croisementIndex = randint(1,len(populationParent[i][0].adn)-1)
 
-			childGenes = populationParent[i][0].adn[:croisementIndex] + populationParent[i][0].adn[-croisementIndex:]
-			print 'gneeeeeeee'
-			print len(populationParent[i][0].adn[:croisementIndex])
-			print len(populationParent[i][0].adn[croisementIndex:])
-			print len(childGenes)
-			#for j in range(len(populationParent[i][0].adn)):
-			#	if j < croisementIndex :
-			#		childGenes.append(populationParent[i][0].adn[j])
-			#	else :
-			#		childGenes.append(populationParent[i][1].adn[j])
-			# print str(i) + '>>>' + str(childGenes) + '(' + str(croisementIndex) + ')'
+			childGenes = populationParent[i][0].adn[:croisementIndex] + populationParent[i][0].adn[-(len(populationParent[i][1].adn)-croisementIndex):]
 			valid = True
 			#child = Individu(childGenes)
 			#child.computeScore2(incomp)
