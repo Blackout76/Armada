@@ -82,7 +82,7 @@ def generateChild(indexParent,incomp,travels,links,nbBus,populationParent,adnCro
 	childGenes = []
 	croisementIndex = randint(1,len(populationParent[indexParent][0].adn)-1)
 	childGenes = populationParent[indexParent][0].adn[:croisementIndex] + populationParent[indexParent][0].adn[-(len(populationParent[indexParent][1].adn)-croisementIndex):]
-	child = Individu(childGenes)
+	child = mutate(Individu(childGenes),nbBus)
 	child.computeScore(incomp,travels,links,nbBus)
 	return child
 
@@ -96,7 +96,7 @@ def insertInPopulation(isValidPop,incomp,travels,links,population,populationChil
 	newPopulation = []
 	
 	for i in range(len(populationChild)):
-		newPopulation.append(mutate(populationChild[i],nbBus))
+		newPopulation.append(populationChild[i],nbBus)
 	# Eval the new population
 	#evalPopulation(newPopulation,incomp,travels,links,nbBus)
 	# Compose the new population
