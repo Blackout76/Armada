@@ -3,6 +3,8 @@ from ADN import *
 class Individu(object):
 	def __init__(self, adn):
 		self.score = 0
+		self.scoreDist = 0
+		self.scoreTime = 0
 		self.adn = adn
 	
 	def toString(self):
