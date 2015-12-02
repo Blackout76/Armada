@@ -76,7 +76,7 @@ def generateTravelsOfLine(nameline,terminus,dist,lineType):
 
 		startPoint = TravelPoint( terminusDecoded[terminusIndexStart][0], TravelTime(terminusDecoded[terminusIndexStart][i+1].split(':')) )
 		endPoint = TravelPoint( terminusDecoded[terminusIndexEnd][0], TravelTime(terminusDecoded[terminusIndexEnd][i+1].split(':'))  )
-		travels.append(Travel(nameline, lineType, i, startPoint,endPoint,distDecoded[i+1]))
+		travels.append(Travel(nameline, lineType, i+1, startPoint,endPoint,distDecoded[i+1]))
 	return travels
 
 def generateLinksTravels(travels,links):
