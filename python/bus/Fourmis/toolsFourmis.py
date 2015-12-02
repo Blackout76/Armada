@@ -12,6 +12,13 @@ def updateList(liste1, liste2):
 				break
 	return copyL1	
 
+def depotph():
+	ph = 0
+	#recuper la distance et on l'inverse : 1/D , ce qui correspond a beaucoup de pheromone pour un petit trajet.
+	return ph
+
+
+
 
 # def chooseTravel(pointActuel, listeVoisins):
 	
