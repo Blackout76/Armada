@@ -9,7 +9,7 @@ import sys
 nbBus = 100
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
-	print int(sys.argv[1])
+	print "Bus number : " + int(sys.argv[1])
 
 score_objectif = 23333.0000001
 population_size = 50
@@ -23,6 +23,7 @@ adn_croisement_count = 5
 links = generateLiaisons()
 travels = generateTravels(links)
 incomp = generateIncomp(travels)
+
 
 #print incomp
 #print len(travels[0].travelUncompatible)
