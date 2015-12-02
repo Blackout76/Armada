@@ -43,10 +43,9 @@ for iteration in xrange(0,nbIteration):
 		print "travels fourmis generer"
 
 		choix = 0
-		Tk.append(travelFourmis[choix])
+		Tk.append(travelIterationIteration[choix])
 
 		while len(travelFourmis) != 0:
-
 			choixPrecedent = choix
 
 			voisins = voisinsPossible(travelIterationIteration, choix)
@@ -58,6 +57,7 @@ for iteration in xrange(0,nbIteration):
 			for x in xrange(0,(supprFourmis)):
 				del travelFourmis[x]
 				pass
+			len(travelFourmis)
 
 			pass
 		

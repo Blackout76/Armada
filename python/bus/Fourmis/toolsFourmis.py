@@ -61,30 +61,29 @@ def voisinsPossible(liste, point):
 	if pointActuel == 0:
 		listeVoisins.append(liste[pointActuel])
 
-		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5):
+		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
 			listeVoisins.append(liste[pointSuivant])
 			pointSuivant = pointSuivant + 1
 			if pointSuivant == 538 :
-				break
+				sortir = 1
 
 	else:
-		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5):
+		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
 			pointSuivant = pointSuivant + 1
 			if pointSuivant == 538 :
-				break
+				sortir = 1
 
 		listeVoisins.append(liste[pointSuivant])
 		pointVoisin = copy.deepcopy(pointSuivant) + 1
 
-		while copyListe[pointSuivant].endPoint.time.inMin() > (copyListe[pointVoisin].startPoint.time.inMin() + 5):
+		while copyListe[pointSuivant].endPoint.time.inMin() > (copyListe[pointVoisin].startPoint.time.inMin() + 5) and sortir == 0:
 			listeVoisins.append(liste[pointVoisin])
 			pointVoisin = pointVoisin + 1
-			print pointVoisin
 			if pointVoisin==538 :
-				break
+				sortir = 1
 
-	for x in xrange(0,len(listeVoisins)):
-		print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
+	# for x in xrange(0,len(listeVoisins)):
+	# 	print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
 	 
 
 	return listeVoisins
@@ -95,7 +94,7 @@ def choisirVoisin(liste):
 	copyListe = liste
 	tailleL = len(copyListe)
 
-	choix = randint(0, tailleL)
+	choix = randint(1, tailleL)
 
 	return choix
 	pass
