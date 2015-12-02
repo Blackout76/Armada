@@ -109,3 +109,28 @@ def saveIndividu (nbBus,messageLines):
 	for l in messageLines:
 		file.write(l)
 		file.write("\n")
+
+
+def exportIndividu(nbBus,individu,travels):
+	print ' je suis dans export'
+	total = 0
+	lines = []
+	for j in range(nbBus+1):
+		print'###>'
+		nbTrajetbus = 0
+		strtraj = ''
+		for i in range(len(individu.adn)):
+			if individu.adn[i] == j:
+				strtraj += ',l'+str(travels[i].lineName)+':'+travels[i].lineType+':v'+str(travels[i].lineNumber)
+				nbTrajetbus += 1
+		total += nbTrajetbus
+		lines.append('bus' + str(j)+strtraj)
+		print nbBus
+
+	lines.insert(0,str(nbBus)+','+'score heure'+','+'score distance')
+	lines.insert(0,'#Bentoumi Feth-Allah, Bosch I Sais Jordi, Casol Nicolas, Jouet Jeremie, Leger Olivier, Menet Cedric')
+
+	file = open('Data/Save/' + str(nbBus) + '_AAAAAAAGNEGNENGEN_' + str(time()) +'.csv', 'w')
+	for l in lines:
+		file.write(l)
+		file.write("\n")
