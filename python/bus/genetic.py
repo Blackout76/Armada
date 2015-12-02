@@ -6,7 +6,7 @@ from time import *
 from math import *
 import sys
 
-nbBus = 120
+nbBus = 200
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
 	print "Bus number : " + int(sys.argv[1])
@@ -17,23 +17,16 @@ child_population_size = 20
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
-adn_croisement_count = 5
+adn_croisement_count = 1
 
 links = generateLiaisons()
 travels = generateTravels(links)
 incomp = generateIncomp(travels)
 
 
-#print incomp
-#print len(travels[0].travelUncompatible)
-
-
-
-
 #while nbBus > 0:
 timeStart = time()
-adnBase = generateBasicADN(travels)
-population = createPopulation(population_size, adnBase,nbBus)
+population = createPopulation(population_size,travels,nbBus)
 
 evalPopulation(population,incomp,travels,links,nbBus)
 
@@ -48,15 +41,18 @@ for i in range(iteration):
 	print '		Construction nouvelle population ...'
 	population = insertInPopulation(isValidPop,incomp,travels,links,population,populationChild,population_size,nbBus)
 	print '		Score:'
-	print '			max: ' + str(population[population_size-1].score) + '	' + str(population[population_size-1].scoreTime) + '	'  + str(population[population_size-1].scoreDist)  
+	print '			max: ' + str(population[population_size-1].score) + '	Time: ' + str(population[population_size-1].scoreTime) + 'min	Dist:'  + str(population[population_size-1].scoreDist)  
 	print '			min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist:'  + str(population[0].scoreDist)  
 	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539 and not isValidPop:
+		break
 		evalPopulation(population,incomp,travels,links,nbBus)
 		isValidPop = True
+		print 'aloooooooooooooooooo'
 	else:
 		isValidPop = False
 
 
+exportIndividu(nbBus,population[population_size-1],travels)
 
 total = 0
 lines = []

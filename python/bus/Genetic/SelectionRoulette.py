@@ -26,7 +26,6 @@ class Roulette():
 		for i in range(len(self.items)): 
 			if val <= self.items[i].score:
 				return self.items[i].id
-		print 'gNEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
 		return 0
 
 class RouletteItem():

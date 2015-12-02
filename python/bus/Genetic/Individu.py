@@ -27,7 +27,7 @@ class Individu(object):
 			inter = set(buslist[busIndex]) & set(buslistUncompatibility[busIndex])
 			self.score += (len(buslist[busIndex]) - len(inter))
 
-
+			
 		#IF SOLUTION AVAIBLE
 		self.scoreDist = 0
 		self.scoreTime = 0
@@ -36,19 +36,23 @@ class Individu(object):
 				busTravels.sort(key=lambda x: int(x.startPoint.time.hour) * 60 + int(x.startPoint.time.min), reverse=False)
 				lastTravelEndPointName = ''
 				for travelIndex in range(len(busTravels)):
+					self.scoreDist += int(busTravels[travelIndex].dist)
+					self.scoreTime += int(busTravels[travelIndex].endPoint.time.inMin()) - int(busTravels[travelIndex].startPoint.time.inMin())
 					if travelIndex == 0:
-						self.scoreDist += int(links.get('T0' + ':' + str(busTravels[travelIndex].startPoint.name)).dist)
-						self.scoreTime += int(links.get('T0' + ':' + str(busTravels[travelIndex].startPoint.name)).time)
+						print links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).dist
+						self.scoreDist += int(links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).dist)
+						self.scoreTime += int(links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).time)
 						lastTravelEndPointName = busTravels[travelIndex].endPoint.name
 					else:
-						self.scoreDist += int(links.get(str(lastTravelEndPointName) + ':' + str(busTravels[travelIndex].startPoint.name)).dist)
-						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + str(busTravels[travelIndex].startPoint.name)).time) + 5
+						self.scoreDist += int(links.get(str(lastTravelEndPointName + ':' + busTravels[travelIndex].startPoint.name)).dist)
+						self.scoreTime += int(links.get(str(lastTravelEndPointName + ':' + busTravels[travelIndex].startPoint.name)).time) + 5
 						lastTravelEndPointName = busTravels[travelIndex].endPoint.name
 
-					if travelIndex == len(busTravels):
-						self.scoreDist += int(links.get(str(lastTravelEndPointName) + ':' + 'T0').dist)
-						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + 'T0').time) + 5
-		self.scoreTotal = float(self.scoreTime*25/60) +  self.scoreDist
+					if travelIndex == len(busTravels)-1:
+						self.scoreDist += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).dist)
+						self.scoreTime += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).time) + 5
+			self.scoreTotal = float(self.scoreTime*25.0/60.0) +  self.scoreDist
+			print 'SCORE : ' + str(self.scoreTotal)
 
 
 

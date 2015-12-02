@@ -1,0 +1,1629 @@
+###>
+ligne:1   start:T1(06:56)   end:T2(07:33)
+Nb trajet totale pour le bus 0 : 1
+###>
+ligne:3   start:T2(13:25)   end:T4(14:01)
+ligne:15   start:T22(17:29)   end:T13(17:48)
+Nb trajet totale pour le bus 1 : 2
+###>
+ligne:1   start:T2(15:22)   end:T1(15:50)
+Nb trajet totale pour le bus 2 : 1
+###>
+Nb trajet totale pour le bus 3 : 0
+###>
+Nb trajet totale pour le bus 4 : 0
+###>
+ligne:4   start:T5(17:10)   end:T7(17:25)
+ligne:11   start:T16(12:38)   end:T17(13:26)
+Nb trajet totale pour le bus 5 : 2
+###>
+ligne:3   start:T2(07:42)   end:T4(08:18)
+Nb trajet totale pour le bus 6 : 1
+###>
+ligne:2   start:T4(08:35)   end:T5(09:01)
+ligne:3   start:T2(10:02)   end:T4(10:40)
+Nb trajet totale pour le bus 7 : 2
+###>
+Nb trajet totale pour le bus 8 : 0
+###>
+ligne:11   start:T17(11:04)   end:T16(11:58)
+ligne:13   start:T20(06:26)   end:T16(07:00)
+Nb trajet totale pour le bus 9 : 2
+###>
+ligne:10   start:T15(09:40)   end:T16(10:05)
+Nb trajet totale pour le bus 10 : 1
+###>
+ligne:1   start:T1(17:56)   end:T2(18:33)
+ligne:5   start:T11(12:10)   end:T9(12:36)
+Nb trajet totale pour le bus 11 : 2
+###>
+Nb trajet totale pour le bus 12 : 0
+###>
+ligne:12   start:T2(15:00)   end:T18(15:47)
+Nb trajet totale pour le bus 13 : 1
+###>
+ligne:2   start:T5(12:43)   end:T4(13:05)
+ligne:5   start:T11(11:20)   end:T10(11:42)
+Nb trajet totale pour le bus 14 : 2
+###>
+Nb trajet totale pour le bus 15 : 0
+###>
+ligne:2   start:T4(12:56)   end:T5(13:16)
+Nb trajet totale pour le bus 16 : 1
+###>
+ligne:2   start:T5(08:40)   end:T4(09:05)
+ligne:5   start:T10(17:37)   end:T11(17:57)
+Nb trajet totale pour le bus 17 : 2
+###>
+ligne:3   start:T4(16:59)   end:T2(17:29)
+Nb trajet totale pour le bus 18 : 1
+###>
+Nb trajet totale pour le bus 19 : 0
+###>
+Nb trajet totale pour le bus 20 : 0
+###>
+ligne:3   start:T2(06:07)   end:T4(06:42)
+Nb trajet totale pour le bus 21 : 1
+###>
+ligne:5   start:T10(15:57)   end:T11(16:17)
+Nb trajet totale pour le bus 22 : 1
+###>
+ligne:3   start:T2(15:03)   end:T4(15:40)
+Nb trajet totale pour le bus 23 : 1
+###>
+ligne:6   start:T2(10:00)   end:T5(10:10)
+ligne:7   start:T5(16:10)   end:T12(16:41)
+Nb trajet totale pour le bus 24 : 2
+###>
+ligne:3   start:T2(13:42)   end:T4(14:19)
+ligne:7   start:T12(10:35)   end:T5(11:01)
+Nb trajet totale pour le bus 25 : 2
+###>
+Nb trajet totale pour le bus 26 : 0
+###>
+ligne:3   start:T4(07:06)   end:T2(07:36)
+ligne:12   start:T18(16:26)   end:T2(17:13)
+Nb trajet totale pour le bus 27 : 2
+###>
+ligne:3   start:T4(14:46)   end:T2(15:16)
+Nb trajet totale pour le bus 28 : 1
+###>
+ligne:12   start:T18(13:19)   end:T2(14:06)
+Nb trajet totale pour le bus 29 : 1
+###>
+ligne:15   start:T22(16:37)   end:T23(17:00)
+Nb trajet totale pour le bus 30 : 1
+###>
+ligne:3   start:T2(06:26)   end:T4(07:01)
+Nb trajet totale pour le bus 31 : 1
+###>
+ligne:2   start:T4(15:58)   end:T5(16:21)
+ligne:3   start:T4(10:06)   end:T2(10:36)
+Nb trajet totale pour le bus 32 : 2
+###>
+ligne:12   start:T2(07:14)   end:T18(08:01)
+Nb trajet totale pour le bus 33 : 1
+###>
+Nb trajet totale pour le bus 34 : 0
+###>
+Nb trajet totale pour le bus 35 : 0
+###>
+Nb trajet totale pour le bus 36 : 0
+###>
+ligne:1   start:T1(15:56)   end:T2(16:33)
+ligne:2   start:T4(20:11)   end:T5(20:28)
+ligne:2   start:T5(11:00)   end:T4(11:25)
+Nb trajet totale pour le bus 37 : 3
+###>
+ligne:7   start:T5(18:30)   end:T12(18:59)
+Nb trajet totale pour le bus 38 : 1
+###>
+ligne:3   start:T4(08:26)   end:T2(08:56)
+ligne:9   start:T2(12:20)   end:T13(13:02)
+Nb trajet totale pour le bus 39 : 2
+###>
+ligne:12   start:T2(13:09)   end:T18(13:56)
+Nb trajet totale pour le bus 40 : 1
+###>
+Nb trajet totale pour le bus 41 : 0
+###>
+ligne:1   start:T1(20:07)   end:T3(20:10)
+ligne:2   start:T5(18:41)   end:T4(19:03)
+ligne:4   start:T7(11:29)   end:T5(11:37)
+Nb trajet totale pour le bus 42 : 3
+###>
+ligne:11   start:T16(08:38)   end:T17(09:28)
+Nb trajet totale pour le bus 43 : 1
+###>
+Nb trajet totale pour le bus 44 : 0
+###>
+ligne:11   start:T17(11:42)   end:T16(12:36)
+ligne:15   start:T22(18:39)   end:T13(18:58)
+Nb trajet totale pour le bus 45 : 2
+###>
+Nb trajet totale pour le bus 46 : 0
+###>
+Nb trajet totale pour le bus 47 : 0
+###>
+ligne:7   start:T12(16:50)   end:T5(17:16)
+Nb trajet totale pour le bus 48 : 1
+###>
+ligne:2   start:T5(18:01)   end:T4(18:25)
+Nb trajet totale pour le bus 49 : 1
+###>
+ligne:3   start:T4(14:06)   end:T2(14:36)
+Nb trajet totale pour le bus 50 : 1
+###>
+Nb trajet totale pour le bus 51 : 0
+###>
+Nb trajet totale pour le bus 52 : 0
+###>
+ligne:11   start:T17(13:02)   end:T16(13:56)
+Nb trajet totale pour le bus 53 : 1
+###>
+Nb trajet totale pour le bus 54 : 0
+###>
+ligne:10   start:T16(14:48)   end:T15(15:21)
+Nb trajet totale pour le bus 55 : 1
+###>
+ligne:4   start:T5(13:10)   end:T7(13:25)
+Nb trajet totale pour le bus 56 : 1
+###>
+Nb trajet totale pour le bus 57 : 0
+###>
+ligne:6   start:T5(10:37)   end:T2(10:52)
+ligne:10   start:T16(07:32)   end:T14(08:15)
+Nb trajet totale pour le bus 58 : 2
+###>
+Nb trajet totale pour le bus 59 : 0
+###>
+ligne:1   start:T1(10:36)   end:T2(11:13)
+ligne:11   start:T17(15:00)   end:T16(15:54)
+Nb trajet totale pour le bus 60 : 2
+###>
+ligne:10   start:T16(09:07)   end:T15(09:40)
+Nb trajet totale pour le bus 61 : 1
+###>
+ligne:13   start:T16(18:33)   end:T20(19:13)
+Nb trajet totale pour le bus 62 : 1
+###>
+ligne:13   start:T20(17:45)   end:T16(18:28)
+ligne:14   start:T15(13:27)   end:T14(13:52)
+Nb trajet totale pour le bus 63 : 2
+###>
+ligne:1   start:T2(11:22)   end:T1(11:50)
+ligne:6   start:T2(16:00)   end:T5(16:10)
+Nb trajet totale pour le bus 64 : 2
+###>
+Nb trajet totale pour le bus 65 : 0
+###>
+ligne:9   start:T2(8:55)   end:T13(9:37)
+Nb trajet totale pour le bus 66 : 1
+###>
+ligne:11   start:T16(13:58)   end:T17(14:46)
+Nb trajet totale pour le bus 67 : 1
+###>
+Nb trajet totale pour le bus 68 : 0
+###>
+Nb trajet totale pour le bus 69 : 0
+###>
+ligne:1   start:T1(10:16)   end:T2(10:53)
+Nb trajet totale pour le bus 70 : 1
+###>
+ligne:3   start:T5(11:00)   end:T4(11:30)
+ligne:4   start:T5(12:10)   end:T7(12:22)
+Nb trajet totale pour le bus 71 : 2
+###>
+Nb trajet totale pour le bus 72 : 0
+###>
+Nb trajet totale pour le bus 73 : 0
+###>
+ligne:2   start:T5(07:19)   end:T4(07:41)
+ligne:5   start:T11(14:46)   end:T10(15:08)
+Nb trajet totale pour le bus 74 : 2
+###>
+Nb trajet totale pour le bus 75 : 0
+###>
+ligne:3   start:T2(08:03)   end:T4(08:40)
+Nb trajet totale pour le bus 76 : 1
+###>
+ligne:2   start:T5(14:23)   end:T4(14:46)
+Nb trajet totale pour le bus 77 : 1
+###>
+ligne:1   start:T1(13:16)   end:T2(13:53)
+ligne:12   start:T18(14:35)   end:T2(15:22)
+Nb trajet totale pour le bus 78 : 2
+###>
+ligne:12   start:T18(18:17)   end:T2(19:04)
+Nb trajet totale pour le bus 79 : 1
+###>
+Nb trajet totale pour le bus 80 : 0
+###>
+ligne:2   start:T4(06:56)   end:T5(07:18)
+Nb trajet totale pour le bus 81 : 1
+###>
+Nb trajet totale pour le bus 82 : 0
+###>
+Nb trajet totale pour le bus 83 : 0
+###>
+ligne:9   start:T13(8:03)   end:T2(8:45)
+Nb trajet totale pour le bus 84 : 1
+###>
+ligne:1   start:T1(19:36)   end:T2(20:13)
+ligne:12   start:T2(11:51)   end:T18(12:38)
+Nb trajet totale pour le bus 85 : 2
+###>
+ligne:2   start:T5(19:00)   end:T4(19:22)
+ligne:13   start:T20(07:53)   end:T16(08:27)
+Nb trajet totale pour le bus 86 : 2
+###>
+Nb trajet totale pour le bus 87 : 0
+###>
+Nb trajet totale pour le bus 88 : 0
+###>
+Nb trajet totale pour le bus 89 : 0
+###>
+Nb trajet totale pour le bus 90 : 0
+###>
+ligne:4   start:T5(14:10)   end:T7(14:25)
+Nb trajet totale pour le bus 91 : 1
+###>
+ligne:12   start:T18(17:03)   end:T2(17:50)
+Nb trajet totale pour le bus 92 : 1
+###>
+ligne:10   start:T14(18:11)   end:T16(19:00)
+Nb trajet totale pour le bus 93 : 1
+###>
+ligne:6   start:T5(13:37)   end:T2(13:52)
+ligne:11   start:T16(09:58)   end:T17(10:46)
+Nb trajet totale pour le bus 94 : 2
+###>
+ligne:2   start:T5(14:36)   end:T4(14:59)
+ligne:11   start:T17(19:33)   end:T16(20:27)
+Nb trajet totale pour le bus 95 : 2
+###>
+ligne:12   start:T2(09:30)   end:T18(10:17)
+Nb trajet totale pour le bus 96 : 1
+###>
+ligne:10   start:T15(09:08)   end:T16(09:33)
+ligne:14   start:T15(10:23)   end:T14(10:48)
+Nb trajet totale pour le bus 97 : 2
+###>
+ligne:2   start:T4(14:00)   end:T5(14:22)
+ligne:2   start:T5(16:59)   end:T4(17:23)
+Nb trajet totale pour le bus 98 : 2
+###>
+Nb trajet totale pour le bus 99 : 0
+###>
+ligne:6   start:T5(09:37)   end:T2(09:52)
+Nb trajet totale pour le bus 100 : 1
+###>
+ligne:3   start:T2(15:44)   end:T4(16:21)
+Nb trajet totale pour le bus 101 : 1
+###>
+ligne:2   start:T4(10:33)   end:T5(10:59)
+Nb trajet totale pour le bus 102 : 1
+###>
+ligne:2   start:T5(17:20)   end:T4(17:44)
+ligne:12   start:T18(20:36)   end:T19(20:39)
+Nb trajet totale pour le bus 103 : 2
+###>
+ligne:11   start:T16(06:45)   end:T17(07:35)
+Nb trajet totale pour le bus 104 : 1
+###>
+ligne:5   start:T11(13:56)   end:T10(14:18)
+Nb trajet totale pour le bus 105 : 1
+###>
+Nb trajet totale pour le bus 106 : 0
+###>
+ligne:2   start:T4(18:17)   end:T5(18:40)
+ligne:13   start:T16(08:27)   end:T20(09:10)
+Nb trajet totale pour le bus 107 : 2
+###>
+Nb trajet totale pour le bus 108 : 0
+###>
+Nb trajet totale pour le bus 109 : 0
+###>
+ligne:1   start:T2(07:42)   end:T1(08:10)
+ligne:3   start:T4(06:55)   end:T2(07:25)
+Nb trajet totale pour le bus 110 : 2
+###>
+ligne:2   start:T4(09:19)   end:T5(09:45)
+ligne:10   start:T15(14:41)   end:T16(15:06)
+Nb trajet totale pour le bus 111 : 2
+###>
+ligne:9   start:T13(11:18)   end:T2(12:00)
+ligne:13   start:T20(09:17)   end:T16(09:51)
+Nb trajet totale pour le bus 112 : 2
+###>
+ligne:11   start:T16(07:25)   end:T17(08:15)
+Nb trajet totale pour le bus 113 : 1
+###>
+ligne:2   start:T5(15:57)   end:T4(16:20)
+ligne:5   start:T10(14:18)   end:T11(14:38)
+ligne:11   start:T16(17:58)   end:T17(18:48)
+ligne:12   start:T18(10:19)   end:T2(11:06)
+Nb trajet totale pour le bus 114 : 4
+###>
+ligne:11   start:T17(10:22)   end:T16(11:16)
+Nb trajet totale pour le bus 115 : 1
+###>
+Nb trajet totale pour le bus 116 : 0
+###>
+ligne:5   start:T11(08:48)   end:T10(09:10)
+Nb trajet totale pour le bus 117 : 1
+###>
+Nb trajet totale pour le bus 118 : 0
+###>
+ligne:11   start:T16(10:38)   end:T17(11:26)
+Nb trajet totale pour le bus 119 : 1
+###>
+Nb trajet totale pour le bus 120 : 0
+###>
+Nb trajet totale pour le bus 121 : 0
+###>
+ligne:13   start:T20(10:43)   end:T16(11:17)
+Nb trajet totale pour le bus 122 : 1
+###>
+ligne:1   start:T2(16:22)   end:T1(16:50)
+ligne:3   start:T4(15:26)   end:T2(15:56)
+ligne:4   start:T5(18:37)   end:T8(18:50)
+Nb trajet totale pour le bus 123 : 3
+###>
+ligne:4   start:T7(13:29)   end:T5(13:37)
+Nb trajet totale pour le bus 124 : 1
+###>
+ligne:2   start:T4(17:35)   end:T5(18:00)
+Nb trajet totale pour le bus 125 : 1
+###>
+Nb trajet totale pour le bus 126 : 0
+###>
+ligne:2   start:T4(08:53)   end:T5(09:19)
+ligne:3   start:T4(17:26)   end:T2(17:56)
+Nb trajet totale pour le bus 127 : 2
+###>
+ligne:13   start:T20(12:15)   end:T16(12:53)
+Nb trajet totale pour le bus 128 : 1
+###>
+Nb trajet totale pour le bus 129 : 0
+###>
+ligne:1   start:T2(10:22)   end:T1(10:50)
+ligne:3   start:T4(17:06)   end:T2(17:36)
+Nb trajet totale pour le bus 130 : 2
+###>
+ligne:1   start:T2(12:02)   end:T1(12:30)
+Nb trajet totale pour le bus 131 : 1
+###>
+ligne:14   start:T14(17:56)   end:T15(18:24)
+Nb trajet totale pour le bus 132 : 1
+###>
+ligne:2   start:T5(18:22)   end:T4(18:46)
+Nb trajet totale pour le bus 133 : 1
+###>
+ligne:1   start:T2(18:22)   end:T1(18:50)
+ligne:4   start:T5(16:10)   end:T7(16:25)
+Nb trajet totale pour le bus 134 : 2
+###>
+Nb trajet totale pour le bus 135 : 0
+###>
+ligne:9   start:T2(18:35)   end:T13(19:16)
+Nb trajet totale pour le bus 136 : 1
+###>
+Nb trajet totale pour le bus 137 : 0
+###>
+Nb trajet totale pour le bus 138 : 0
+###>
+Nb trajet totale pour le bus 139 : 0
+###>
+ligne:1   start:T1(14:16)   end:T2(14:53)
+Nb trajet totale pour le bus 140 : 1
+###>
+Nb trajet totale pour le bus 141 : 0
+###>
+Nb trajet totale pour le bus 142 : 0
+###>
+Nb trajet totale pour le bus 143 : 0
+###>
+Nb trajet totale pour le bus 144 : 0
+###>
+Nb trajet totale pour le bus 145 : 0
+###>
+ligne:3   start:T4(07:26)   end:T2(07:56)
+Nb trajet totale pour le bus 146 : 1
+###>
+Nb trajet totale pour le bus 147 : 0
+###>
+ligne:10   start:T16(14:08)   end:T15(14:41)
+Nb trajet totale pour le bus 148 : 1
+###>
+ligne:1   start:T2(15:02)   end:T1(15:30)
+ligne:3   start:T4(11:26)   end:T2(11:56)
+Nb trajet totale pour le bus 149 : 2
+###>
+ligne:2   start:T4(08:13)   end:T5(08:39)
+ligne:15   start:T13(19:16)   end:T22(19:36)
+Nb trajet totale pour le bus 150 : 2
+###>
+ligne:2   start:T4(13:34)   end:T5(13:56)
+Nb trajet totale pour le bus 151 : 1
+###>
+ligne:15   start:T13(9:37)   end:T22(9:57)
+Nb trajet totale pour le bus 152 : 1
+###>
+ligne:3   start:T4(12:34)   end:T2(13:04)
+ligne:3   start:T2(11:44)   end:T4(12:22)
+Nb trajet totale pour le bus 153 : 2
+###>
+ligne:1   start:T2(16:02)   end:T1(16:30)
+ligne:5   start:T11(17:15)   end:T10(17:37)
+Nb trajet totale pour le bus 154 : 2
+###>
+ligne:2   start:T5(09:02)   end:T4(09:27)
+Nb trajet totale pour le bus 155 : 1
+###>
+Nb trajet totale pour le bus 156 : 0
+###>
+Nb trajet totale pour le bus 157 : 0
+###>
+ligne:12   start:T18(08:27)   end:T2(09:14)
+Nb trajet totale pour le bus 158 : 1
+###>
+ligne:3   start:T4(10:46)   end:T2(11:16)
+ligne:11   start:T17(06:29)   end:T16(07:23)
+Nb trajet totale pour le bus 159 : 2
+###>
+ligne:2   start:T4(06:38)   end:T5(06:58)
+ligne:3   start:T2(11:02)   end:T4(11:40)
+ligne:13   start:T20(12:56)   end:T16(13:30)
+Nb trajet totale pour le bus 160 : 3
+###>
+Nb trajet totale pour le bus 161 : 0
+###>
+ligne:2   start:T4(19:19)   end:T5(19:39)
+Nb trajet totale pour le bus 162 : 1
+###>
+Nb trajet totale pour le bus 163 : 0
+###>
+ligne:3   start:T2(17:05)   end:T4(17:42)
+Nb trajet totale pour le bus 164 : 1
+###>
+Nb trajet totale pour le bus 165 : 0
+###>
+Nb trajet totale pour le bus 166 : 0
+###>
+ligne:10   start:T16(18:06)   end:T14(19:00)
+Nb trajet totale pour le bus 167 : 1
+###>
+ligne:7   start:T12(14:30)   end:T5(14:56)
+Nb trajet totale pour le bus 168 : 1
+###>
+ligne:13   start:T16(20:00)   end:T20(20:43)
+Nb trajet totale pour le bus 169 : 1
+###>
+ligne:10   start:T15(11:25)   end:T16(11:50)
+ligne:14   start:T14(18:56)   end:T15(19:24)
+Nb trajet totale pour le bus 170 : 2
+###>
+Nb trajet totale pour le bus 171 : 0
+###>
+ligne:1   start:T1(15:16)   end:T2(15:53)
+ligne:14   start:T15(07:25)   end:T14(07:50)
+Nb trajet totale pour le bus 172 : 2
+###>
+Nb trajet totale pour le bus 173 : 0
+###>
+Nb trajet totale pour le bus 174 : 0
+###>
+ligne:11   start:T16(16:38)   end:T17(17:32)
+Nb trajet totale pour le bus 175 : 1
+###>
+Nb trajet totale pour le bus 176 : 0
+###>
+ligne:3   start:T2(18:06)   end:T4(18:43)
+ligne:12   start:T18(12:01)   end:T2(12:48)
+Nb trajet totale pour le bus 177 : 2
+###>
+ligne:14   start:T14(13:57)   end:T15(14:25)
+ligne:14   start:T15(18:26)   end:T14(18:51)
+Nb trajet totale pour le bus 178 : 2
+###>
+ligne:2   start:T4(14:12)   end:T5(14:35)
+ligne:4   start:T7(09:29)   end:T5(09:37)
+Nb trajet totale pour le bus 179 : 2
+###>
+ligne:3   start:T2(07:35)   end:T4(08:10)
+Nb trajet totale pour le bus 180 : 1
+###>
+ligne:2   start:T5(16:22)   end:T4(16:46)
+Nb trajet totale pour le bus 181 : 1
+###>
+ligne:10   start:T16(19:15)   end:T14(20:02)
+Nb trajet totale pour le bus 182 : 1
+###>
+ligne:2   start:T4(06:05)   end:T5(06:25)
+ligne:7   start:T5(12:10)   end:T12(12:39)
+ligne:12   start:T2(08:54)   end:T18(09:41)
+Nb trajet totale pour le bus 183 : 3
+###>
+ligne:3   start:T2(12:24)   end:T4(13:02)
+ligne:11   start:T17(09:42)   end:T16(10:36)
+Nb trajet totale pour le bus 184 : 2
+###>
+ligne:2   start:T4(15:34)   end:T5(15:56)
+Nb trajet totale pour le bus 185 : 1
+###>
+Nb trajet totale pour le bus 186 : 0
+###>
+ligne:7   start:T12(13:20)   end:T5(13:46)
+Nb trajet totale pour le bus 187 : 1
+###>
+ligne:12   start:T2(12:30)   end:T18(13:17)
+Nb trajet totale pour le bus 188 : 1
+###>
+ligne:14   start:T15(15:30)   end:T14(15:55)
+Nb trajet totale pour le bus 189 : 1
+###>
+ligne:1   start:T1(09:16)   end:T2(09:53)
+Nb trajet totale pour le bus 190 : 1
+###>
+Nb trajet totale pour le bus 191 : 0
+###>
+ligne:1   start:T1(07:16)   end:T2(07:53)
+ligne:9   start:T13(17:48)   end:T2(18:30)
+ligne:12   start:T2(08:16)   end:T18(09:03)
+Nb trajet totale pour le bus 192 : 3
+###>
+ligne:2   start:T4(18:59)   end:T5(19:19)
+Nb trajet totale pour le bus 193 : 1
+###>
+ligne:3   start:T4(15:06)   end:T2(15:36)
+Nb trajet totale pour le bus 194 : 1
+###>
+ligne:11   start:T16(08:00)   end:T17(08:50)
+Nb trajet totale pour le bus 195 : 1
+###>
+Nb trajet totale pour le bus 196 : 0
+###>
+Nb trajet totale pour le bus 197 : 0
+###>
+ligne:3   start:T4(06:24)   end:T2(06:54)
+ligne:14   start:T15(11:24)   end:T14(11:49)
+Nb trajet totale pour le bus 198 : 2
+###>
+Nb trajet totale pour le bus 199 : 0
+###>
+ligne:1   start:T2(17:42)   end:T1(18:10)
+Nb trajet totale pour le bus 200 : 1
+###>
+Nb trajet totale pour le bus 201 : 0
+###>
+ligne:3   start:T4(16:49)   end:T2(17:19)
+ligne:10   start:T14(12:05)   end:T16(12:48)
+Nb trajet totale pour le bus 202 : 2
+###>
+ligne:3   start:T2(10:21)   end:T4(10:59)
+Nb trajet totale pour le bus 203 : 1
+###>
+ligne:1   start:T1(11:16)   end:T2(11:53)
+Nb trajet totale pour le bus 204 : 1
+###>
+Nb trajet totale pour le bus 205 : 0
+###>
+ligne:3   start:T4(06:44)   end:T2(07:14)
+ligne:14   start:T14(08:51)   end:T15(09:19)
+Nb trajet totale pour le bus 206 : 2
+###>
+Nb trajet totale pour le bus 207 : 0
+###>
+Nb trajet totale pour le bus 208 : 0
+###>
+Nb trajet totale pour le bus 209 : 0
+###>
+ligne:1   start:T1(14:36)   end:T2(15:13)
+ligne:3   start:T2(07:24)   end:T4(08:00)
+Nb trajet totale pour le bus 210 : 2
+###>
+Nb trajet totale pour le bus 211 : 0
+###>
+ligne:1   start:T1(19:16)   end:T2(19:53)
+Nb trajet totale pour le bus 212 : 1
+###>
+Nb trajet totale pour le bus 213 : 0
+###>
+ligne:4   start:T7(15:29)   end:T5(15:37)
+Nb trajet totale pour le bus 214 : 1
+###>
+ligne:14   start:T15(17:29)   end:T14(17:54)
+Nb trajet totale pour le bus 215 : 1
+###>
+Nb trajet totale pour le bus 216 : 0
+###>
+ligne:2   start:T4(09:33)   end:T5(09:59)
+Nb trajet totale pour le bus 217 : 1
+###>
+ligne:15   start:T22(10:59)   end:T13(11:18)
+Nb trajet totale pour le bus 218 : 1
+###>
+ligne:1   start:T1(06:11)   end:T2(06:48)
+ligne:1   start:T2(14:22)   end:T1(14:50)
+ligne:7   start:T5(08:55)   end:T12(09:24)
+Nb trajet totale pour le bus 219 : 3
+###>
+ligne:1   start:T2(15:42)   end:T1(16:10)
+ligne:12   start:T2(18:35)   end:T18(19:23)
+Nb trajet totale pour le bus 220 : 2
+###>
+ligne:2   start:T5(12:05)   end:T4(12:30)
+Nb trajet totale pour le bus 221 : 1
+###>
+ligne:2   start:T4(19:40)   end:T5(19:59)
+Nb trajet totale pour le bus 222 : 1
+###>
+Nb trajet totale pour le bus 223 : 0
+###>
+ligne:3   start:T2(09:04)   end:T4(09:42)
+Nb trajet totale pour le bus 224 : 1
+###>
+Nb trajet totale pour le bus 225 : 0
+###>
+Nb trajet totale pour le bus 226 : 0
+###>
+ligne:2   start:T4(11:58)   end:T5(12:24)
+Nb trajet totale pour le bus 227 : 1
+###>
+ligne:4   start:T7(14:29)   end:T5(14:37)
+Nb trajet totale pour le bus 228 : 1
+###>
+Nb trajet totale pour le bus 229 : 0
+###>
+ligne:2   start:T4(07:34)   end:T5(07:58)
+ligne:5   start:T11(16:22)   end:T10(16:44)
+ligne:10   start:T16(09:43)   end:T15(10:16)
+ligne:12   start:T18(10:53)   end:T2(11:40)
+Nb trajet totale pour le bus 230 : 4
+###>
+ligne:2   start:T4(12:15)   end:T5(12:42)
+Nb trajet totale pour le bus 231 : 1
+###>
+ligne:11   start:T16(11:18)   end:T17(12:06)
+Nb trajet totale pour le bus 232 : 1
+###>
+ligne:14   start:T14(07:52)   end:T15(08:20)
+Nb trajet totale pour le bus 233 : 1
+###>
+ligne:1   start:T1(14:56)   end:T2(15:33)
+ligne:12   start:T18(08:03)   end:T2(08:50)
+Nb trajet totale pour le bus 234 : 2
+###>
+Nb trajet totale pour le bus 235 : 0
+###>
+ligne:3   start:T2(16:23)   end:T4(17:00)
+Nb trajet totale pour le bus 236 : 1
+###>
+Nb trajet totale pour le bus 237 : 0
+###>
+Nb trajet totale pour le bus 238 : 0
+###>
+Nb trajet totale pour le bus 239 : 0
+###>
+Nb trajet totale pour le bus 240 : 0
+###>
+ligne:1   start:T2(13:02)   end:T1(13:30)
+ligne:2   start:T4(11:38)   end:T5(12:04)
+Nb trajet totale pour le bus 241 : 2
+###>
+Nb trajet totale pour le bus 242 : 0
+###>
+Nb trajet totale pour le bus 243 : 0
+###>
+Nb trajet totale pour le bus 244 : 0
+###>
+ligne:10   start:T14(19:15)   end:T16(19:58)
+ligne:13   start:T16(16:53)   end:T20(17:40)
+Nb trajet totale pour le bus 245 : 2
+###>
+ligne:1   start:T2(19:02)   end:T1(19:30)
+ligne:11   start:T16(17:18)   end:T17(18:12)
+Nb trajet totale pour le bus 246 : 2
+###>
+ligne:10   start:T15(15:21)   end:T16(15:46)
+ligne:14   start:T14(10:52)   end:T15(11:20)
+Nb trajet totale pour le bus 247 : 2
+###>
+Nb trajet totale pour le bus 248 : 0
+###>
+ligne:1   start:T1(12:16)   end:T2(12:53)
+Nb trajet totale pour le bus 249 : 1
+###>
+Nb trajet totale pour le bus 250 : 0
+###>
+Nb trajet totale pour le bus 251 : 0
+###>
+Nb trajet totale pour le bus 252 : 0
+###>
+ligne:3   start:T2(20:15)   end:T4(20:46)
+ligne:4   start:T5(11:10)   end:T7(11:25)
+Nb trajet totale pour le bus 253 : 2
+###>
+Nb trajet totale pour le bus 254 : 0
+###>
+Nb trajet totale pour le bus 255 : 0
+###>
+ligne:1   start:T1(18:16)   end:T2(18:53)
+Nb trajet totale pour le bus 256 : 1
+###>
+Nb trajet totale pour le bus 257 : 0
+###>
+ligne:13   start:T20(14:27)   end:T16(15:03)
+Nb trajet totale pour le bus 258 : 1
+###>
+ligne:5   start:T10(10:02)   end:T11(10:22)
+ligne:6   start:T2(18:00)   end:T5(18:10)
+ligne:10   start:T16(12:50)   end:T15(13:23)
+Nb trajet totale pour le bus 259 : 3
+###>
+ligne:11   start:T16(15:18)   end:T17(16:12)
+ligne:13   start:T16(07:00)   end:T20(07:38)
+Nb trajet totale pour le bus 260 : 2
+###>
+Nb trajet totale pour le bus 261 : 0
+###>
+ligne:1   start:T2(08:42)   end:T1(09:10)
+Nb trajet totale pour le bus 262 : 1
+###>
+ligne:2   start:T4(12:38)   end:T5(12:58)
+ligne:15   start:T23(17:01)   end:T22(17:25)
+Nb trajet totale pour le bus 263 : 2
+###>
+Nb trajet totale pour le bus 264 : 0
+###>
+ligne:1   start:T1(13:56)   end:T2(14:33)
+Nb trajet totale pour le bus 265 : 1
+###>
+Nb trajet totale pour le bus 266 : 0
+###>
+Nb trajet totale pour le bus 267 : 0
+###>
+Nb trajet totale pour le bus 268 : 0
+###>
+ligne:6   start:T5(08:37)   end:T2(08:52)
+Nb trajet totale pour le bus 269 : 1
+###>
+Nb trajet totale pour le bus 270 : 0
+###>
+ligne:1   start:T1(11:36)   end:T2(12:13)
+Nb trajet totale pour le bus 271 : 1
+###>
+ligne:11   start:T16(13:18)   end:T17(14:06)
+Nb trajet totale pour le bus 272 : 1
+###>
+ligne:1   start:T2(07:02)   end:T1(07:30)
+ligne:2   start:T4(15:00)   end:T5(15:22)
+Nb trajet totale pour le bus 273 : 2
+###>
+ligne:3   start:T4(09:26)   end:T2(09:56)
+Nb trajet totale pour le bus 274 : 1
+###>
+ligne:11   start:T17(17:44)   end:T16(18:40)
+Nb trajet totale pour le bus 275 : 1
+###>
+Nb trajet totale pour le bus 276 : 0
+###>
+ligne:14   start:T14(12:55)   end:T15(13:23)
+Nb trajet totale pour le bus 277 : 1
+###>
+ligne:2   start:T4(17:56)   end:T5(18:21)
+ligne:10   start:T14(13:10)   end:T16(13:53)
+Nb trajet totale pour le bus 278 : 2
+###>
+ligne:10   start:T15(15:49)   end:T16(16:14)
+Nb trajet totale pour le bus 279 : 1
+###>
+Nb trajet totale pour le bus 280 : 0
+###>
+Nb trajet totale pour le bus 281 : 0
+###>
+ligne:1   start:T1(12:36)   end:T2(13:13)
+Nb trajet totale pour le bus 282 : 1
+###>
+ligne:3   start:T4(09:46)   end:T2(10:16)
+Nb trajet totale pour le bus 283 : 1
+###>
+ligne:6   start:T5(11:37)   end:T2(11:52)
+ligne:7   start:T12(18:00)   end:T5(18:26)
+Nb trajet totale pour le bus 284 : 2
+###>
+ligne:5   start:T10(16:44)   end:T11(17:04)
+Nb trajet totale pour le bus 285 : 1
+###>
+ligne:2   start:T4(16:14)   end:T5(16:38)
+ligne:3   start:T4(08:05)   end:T2(08:35)
+Nb trajet totale pour le bus 286 : 2
+###>
+Nb trajet totale pour le bus 287 : 0
+###>
+ligne:2   start:T5(20:12)   end:T4(20:35)
+ligne:3   start:T2(11:22)   end:T4(12:00)
+ligne:3   start:T2(14:01)   end:T4(14:38)
+Nb trajet totale pour le bus 288 : 3
+###>
+Nb trajet totale pour le bus 289 : 0
+###>
+ligne:3   start:T2(16:02)   end:T4(16:39)
+Nb trajet totale pour le bus 290 : 1
+###>
+Nb trajet totale pour le bus 291 : 0
+###>
+ligne:3   start:T4(07:46)   end:T2(08:16)
+Nb trajet totale pour le bus 292 : 1
+###>
+ligne:3   start:T4(14:26)   end:T2(14:56)
+ligne:3   start:T2(08:24)   end:T4(09:02)
+ligne:3   start:T5(11:47)   end:T4(12:17)
+Nb trajet totale pour le bus 293 : 3
+###>
+Nb trajet totale pour le bus 294 : 0
+###>
+ligne:10   start:T15(16:41)   end:T16(17:06)
+Nb trajet totale pour le bus 295 : 1
+###>
+ligne:12   start:T18(06:27)   end:T2(07:14)
+Nb trajet totale pour le bus 296 : 1
+###>
+ligne:12   start:T18(07:13)   end:T2(08:00)
+Nb trajet totale pour le bus 297 : 1
+###>
+ligne:4   start:T7(08:29)   end:T5(08:37)
+Nb trajet totale pour le bus 298 : 1
+###>
+ligne:10   start:T16(15:53)   end:T15(16:26)
+Nb trajet totale pour le bus 299 : 1
+###>
+ligne:1   start:T2(13:42)   end:T1(14:10)
+ligne:13   start:T16(15:13)   end:T20(15:57)
+Nb trajet totale pour le bus 300 : 2
+###>
+ligne:1   start:T1(11:56)   end:T2(12:33)
+Nb trajet totale pour le bus 301 : 1
+###>
+ligne:4   start:T7(17:29)   end:T5(17:37)
+ligne:5   start:T11(09:40)   end:T10(10:02)
+ligne:10   start:T15(10:43)   end:T16(11:08)
+ligne:14   start:T15(14:30)   end:T14(14:55)
+Nb trajet totale pour le bus 302 : 4
+###>
+ligne:11   start:T17(16:20)   end:T16(17:16)
+Nb trajet totale pour le bus 303 : 1
+###>
+ligne:1   start:T1(15:36)   end:T2(16:13)
+ligne:3   start:T4(18:07)   end:T2(18:37)
+Nb trajet totale pour le bus 304 : 2
+###>
+Nb trajet totale pour le bus 305 : 0
+###>
+Nb trajet totale pour le bus 306 : 0
+###>
+Nb trajet totale pour le bus 307 : 0
+###>
+ligne:2   start:T4(07:53)   end:T5(08:19)
+ligne:2   start:T4(10:53)   end:T5(11:19)
+ligne:2   start:T5(11:42)   end:T4(12:07)
+ligne:11   start:T17(18:54)   end:T16(19:48)
+Nb trajet totale pour le bus 308 : 4
+###>
+Nb trajet totale pour le bus 309 : 0
+###>
+ligne:1   start:T1(08:16)   end:T2(08:53)
+ligne:1   start:T1(16:36)   end:T2(17:13)
+Nb trajet totale pour le bus 310 : 2
+###>
+Nb trajet totale pour le bus 311 : 0
+###>
+ligne:1   start:T1(10:56)   end:T2(11:33)
+ligne:6   start:T5(17:37)   end:T2(17:52)
+Nb trajet totale pour le bus 312 : 2
+###>
+ligne:1   start:T1(13:36)   end:T2(14:13)
+Nb trajet totale pour le bus 313 : 1
+###>
+Nb trajet totale pour le bus 314 : 0
+###>
+ligne:10   start:T16(11:10)   end:T14(11:58)
+Nb trajet totale pour le bus 315 : 1
+###>
+ligne:6   start:T5(16:37)   end:T2(16:52)
+Nb trajet totale pour le bus 316 : 1
+###>
+Nb trajet totale pour le bus 317 : 0
+###>
+Nb trajet totale pour le bus 318 : 0
+###>
+ligne:11   start:T17(13:42)   end:T16(14:36)
+Nb trajet totale pour le bus 319 : 1
+###>
+ligne:3   start:T4(17:46)   end:T2(18:16)
+ligne:15   start:T22(10:05)   end:T23(10:28)
+Nb trajet totale pour le bus 320 : 2
+###>
+Nb trajet totale pour le bus 321 : 0
+###>
+ligne:1   start:T2(12:22)   end:T1(12:50)
+Nb trajet totale pour le bus 322 : 1
+###>
+Nb trajet totale pour le bus 323 : 0
+###>
+Nb trajet totale pour le bus 324 : 0
+###>
+Nb trajet totale pour le bus 325 : 0
+###>
+Nb trajet totale pour le bus 326 : 0
+###>
+Nb trajet totale pour le bus 327 : 0
+###>
+ligne:5   start:T9(07:23)   end:T11(07:47)
+Nb trajet totale pour le bus 328 : 1
+###>
+Nb trajet totale pour le bus 329 : 0
+###>
+ligne:1   start:T1(07:56)   end:T2(08:33)
+ligne:1   start:T1(16:56)   end:T2(17:33)
+ligne:2   start:T4(11:15)   end:T5(11:41)
+ligne:7   start:T5(10:00)   end:T12(10:29)
+Nb trajet totale pour le bus 330 : 4
+###>
+Nb trajet totale pour le bus 331 : 0
+###>
+ligne:4   start:T5(10:10)   end:T7(10:25)
+Nb trajet totale pour le bus 332 : 1
+###>
+ligne:14   start:T15(09:22)   end:T14(09:47)
+Nb trajet totale pour le bus 333 : 1
+###>
+ligne:3   start:T4(11:48)   end:T2(12:18)
+Nb trajet totale pour le bus 334 : 1
+###>
+ligne:4   start:T5(15:10)   end:T7(15:25)
+Nb trajet totale pour le bus 335 : 1
+###>
+ligne:3   start:T2(06:46)   end:T4(07:21)
+Nb trajet totale pour le bus 336 : 1
+###>
+ligne:2   start:T5(09:20)   end:T4(09:45)
+ligne:10   start:T15(14:21)   end:T16(14:46)
+Nb trajet totale pour le bus 337 : 2
+###>
+ligne:3   start:T4(16:06)   end:T2(16:36)
+Nb trajet totale pour le bus 338 : 1
+###>
+ligne:2   start:T4(07:15)   end:T5(07:38)
+Nb trajet totale pour le bus 339 : 1
+###>
+ligne:1   start:T1(07:36)   end:T2(08:13)
+Nb trajet totale pour le bus 340 : 1
+###>
+ligne:1   start:T1(12:56)   end:T2(13:33)
+Nb trajet totale pour le bus 341 : 1
+###>
+Nb trajet totale pour le bus 342 : 0
+###>
+ligne:14   start:T14(15:00)   end:T15(15:28)
+Nb trajet totale pour le bus 343 : 1
+###>
+ligne:1   start:T1(09:56)   end:T2(10:33)
+ligne:1   start:T2(14:02)   end:T1(14:30)
+ligne:2   start:T5(06:45)   end:T4(07:07)
+ligne:2   start:T5(12:59)   end:T4(13:21)
+ligne:13   start:T20(19:24)   end:T16(19:58)
+Nb trajet totale pour le bus 344 : 5
+###>
+ligne:1   start:T1(16:16)   end:T2(16:53)
+ligne:2   start:T5(06:30)   end:T4(06:52)
+Nb trajet totale pour le bus 345 : 2
+###>
+ligne:2   start:T5(11:20)   end:T4(11:45)
+ligne:3   start:T4(16:26)   end:T2(16:56)
+Nb trajet totale pour le bus 346 : 2
+###>
+Nb trajet totale pour le bus 347 : 0
+###>
+Nb trajet totale pour le bus 348 : 0
+###>
+ligne:2   start:T4(13:15)   end:T5(13:35)
+Nb trajet totale pour le bus 349 : 1
+###>
+ligne:12   start:T2(14:23)   end:T18(15:10)
+Nb trajet totale pour le bus 350 : 1
+###>
+Nb trajet totale pour le bus 351 : 0
+###>
+Nb trajet totale pour le bus 352 : 0
+###>
+ligne:2   start:T5(19:20)   end:T4(19:42)
+ligne:12   start:T2(10:38)   end:T18(11:25)
+Nb trajet totale pour le bus 353 : 2
+###>
+ligne:10   start:T14(20:10)   end:T16(20:53)
+Nb trajet totale pour le bus 354 : 1
+###>
+ligne:4   start:T7(10:29)   end:T5(10:37)
+Nb trajet totale pour le bus 355 : 1
+###>
+ligne:2   start:T4(18:38)   end:T5(18:59)
+ligne:3   start:T4(15:46)   end:T2(16:16)
+ligne:7   start:T12(11:40)   end:T5(12:06)
+Nb trajet totale pour le bus 356 : 3
+###>
+ligne:1   start:T2(07:22)   end:T1(07:50)
+ligne:1   start:T2(11:42)   end:T1(12:10)
+Nb trajet totale pour le bus 357 : 2
+###>
+ligne:2   start:T5(08:02)   end:T4(08:27)
+ligne:10   start:T16(16:18)   end:T14(17:06)
+Nb trajet totale pour le bus 358 : 2
+###>
+ligne:6   start:T2(13:00)   end:T5(13:10)
+Nb trajet totale pour le bus 359 : 1
+###>
+ligne:3   start:T4(12:10)   end:T2(12:40)
+ligne:7   start:T12(08:25)   end:T5(08:51)
+Nb trajet totale pour le bus 360 : 2
+###>
+ligne:2   start:T5(14:56)   end:T4(15:19)
+Nb trajet totale pour le bus 361 : 1
+###>
+ligne:1   start:T2(19:22)   end:T1(19:50)
+ligne:15   start:T13(7:15)   end:T22(7:35)
+Nb trajet totale pour le bus 362 : 2
+###>
+ligne:15   start:T23(14:57)   end:T22(15:21)
+Nb trajet totale pour le bus 363 : 1
+###>
+ligne:1   start:T1(09:36)   end:T2(10:13)
+ligne:14   start:T15(12:26)   end:T14(12:51)
+Nb trajet totale pour le bus 364 : 2
+###>
+Nb trajet totale pour le bus 365 : 0
+###>
+Nb trajet totale pour le bus 366 : 0
+###>
+ligne:1   start:T2(11:02)   end:T1(11:30)
+Nb trajet totale pour le bus 367 : 1
+###>
+Nb trajet totale pour le bus 368 : 0
+###>
+ligne:6   start:T2(17:00)   end:T5(17:10)
+Nb trajet totale pour le bus 369 : 1
+###>
+ligne:4   start:T6(08:18)   end:T7(08:25)
+ligne:7   start:T12(07:20)   end:T5(07:46)
+Nb trajet totale pour le bus 370 : 2
+###>
+ligne:2   start:T5(09:46)   end:T4(10:11)
+Nb trajet totale pour le bus 371 : 1
+###>
+Nb trajet totale pour le bus 372 : 0
+###>
+Nb trajet totale pour le bus 373 : 0
+###>
+Nb trajet totale pour le bus 374 : 0
+###>
+ligne:12   start:T2(18:04)   end:T18(18:52)
+Nb trajet totale pour le bus 375 : 1
+###>
+Nb trajet totale pour le bus 376 : 0
+###>
+Nb trajet totale pour le bus 377 : 0
+###>
+ligne:7   start:T5(07:50)   end:T12(08:19)
+Nb trajet totale pour le bus 378 : 1
+###>
+Nb trajet totale pour le bus 379 : 0
+###>
+ligne:12   start:T2(11:12)   end:T18(11:59)
+Nb trajet totale pour le bus 380 : 1
+###>
+ligne:15   start:T22(14:33)   end:T23(14:56)
+Nb trajet totale pour le bus 381 : 1
+###>
+ligne:1   start:T2(18:42)   end:T1(19:10)
+ligne:13   start:T16(12:05)   end:T20(12:48)
+Nb trajet totale pour le bus 382 : 2
+###>
+ligne:2   start:T5(13:57)   end:T4(14:20)
+ligne:10   start:T14(17:15)   end:T16(18:04)
+Nb trajet totale pour le bus 383 : 2
+###>
+ligne:1   start:T1(17:36)   end:T2(18:13)
+ligne:12   start:T2(13:46)   end:T18(14:33)
+Nb trajet totale pour le bus 384 : 2
+###>
+Nb trajet totale pour le bus 385 : 0
+###>
+ligne:1   start:T2(18:02)   end:T1(18:30)
+Nb trajet totale pour le bus 386 : 1
+###>
+ligne:5   start:T9(13:23)   end:T11(13:47)
+ligne:10   start:T16(08:35)   end:T15(09:08)
+Nb trajet totale pour le bus 387 : 2
+###>
+ligne:14   start:T15(16:32)   end:T14(16:57)
+Nb trajet totale pour le bus 388 : 1
+###>
+ligne:15   start:T13(13:02)   end:T22(13:22)
+Nb trajet totale pour le bus 389 : 1
+###>
+ligne:3   start:T4(09:06)   end:T2(09:36)
+Nb trajet totale pour le bus 390 : 1
+###>
+ligne:10   start:T16(10:10)   end:T15(10:43)
+Nb trajet totale pour le bus 391 : 1
+###>
+ligne:3   start:T2(14:21)   end:T4(14:58)
+Nb trajet totale pour le bus 392 : 1
+###>
+ligne:10   start:T14(07:33)   end:T16(08:16)
+Nb trajet totale pour le bus 393 : 1
+###>
+ligne:1   start:T2(13:22)   end:T1(13:50)
+ligne:3   start:T2(05:48)   end:T4(06:23)
+Nb trajet totale pour le bus 394 : 2
+###>
+Nb trajet totale pour le bus 395 : 0
+###>
+ligne:10   start:T16(13:48)   end:T15(14:21)
+Nb trajet totale pour le bus 396 : 1
+###>
+Nb trajet totale pour le bus 397 : 0
+###>
+ligne:3   start:T4(08:13)   end:T2(08:43)
+ligne:3   start:T2(17:25)   end:T4(18:02)
+ligne:6   start:T2(15:00)   end:T5(15:10)
+Nb trajet totale pour le bus 398 : 3
+###>
+ligne:2   start:T5(12:25)   end:T4(12:50)
+Nb trajet totale pour le bus 399 : 1
+###>
+ligne:2   start:T5(08:20)   end:T4(08:45)
+Nb trajet totale pour le bus 400 : 1
+###>
+ligne:1   start:T1(08:56)   end:T2(09:33)
+Nb trajet totale pour le bus 401 : 1
+###>
+ligne:1   start:T2(06:42)   end:T1(07:10)
+ligne:2   start:T4(15:14)   end:T5(15:36)
+Nb trajet totale pour le bus 402 : 2
+###>
+Nb trajet totale pour le bus 403 : 0
+###>
+ligne:1   start:T1(08:36)   end:T2(09:13)
+ligne:2   start:T4(16:34)   end:T5(16:58)
+Nb trajet totale pour le bus 404 : 2
+###>
+ligne:2   start:T5(10:00)   end:T4(10:25)
+Nb trajet totale pour le bus 405 : 1
+###>
+Nb trajet totale pour le bus 406 : 0
+###>
+ligne:1   start:T1(20:45)   end:T3(20:48)
+ligne:3   start:T4(18:46)   end:T2(19:16)
+Nb trajet totale pour le bus 407 : 2
+###>
+ligne:3   start:T2(09:43)   end:T4(10:21)
+ligne:7   start:T5(11:05)   end:T12(11:34)
+Nb trajet totale pour le bus 408 : 2
+###>
+ligne:10   start:T15(13:23)   end:T16(13:48)
+Nb trajet totale pour le bus 409 : 1
+###>
+ligne:3   start:T4(13:26)   end:T2(13:56)
+Nb trajet totale pour le bus 410 : 1
+###>
+ligne:10   start:T14(08:20)   end:T16(09:03)
+Nb trajet totale pour le bus 411 : 1
+###>
+ligne:3   start:T4(17:59)   end:T2(18:29)
+ligne:4   start:T7(16:29)   end:T5(16:37)
+Nb trajet totale pour le bus 412 : 2
+###>
+ligne:3   start:T2(12:06)   end:T4(12:44)
+ligne:11   start:T17(18:19)   end:T16(19:13)
+Nb trajet totale pour le bus 413 : 2
+###>
+ligne:13   start:T16(11:19)   end:T20(12:06)
+Nb trajet totale pour le bus 414 : 1
+###>
+ligne:1   start:T2(09:02)   end:T1(09:30)
+Nb trajet totale pour le bus 415 : 1
+###>
+ligne:15   start:T23(13:57)   end:T22(14:21)
+Nb trajet totale pour le bus 416 : 1
+###>
+ligne:1   start:T1(18:36)   end:T2(19:13)
+ligne:2   start:T5(17:40)   end:T4(18:04)
+ligne:4   start:T7(12:26)   end:T5(12:34)
+Nb trajet totale pour le bus 417 : 3
+###>
+ligne:3   start:T4(08:46)   end:T2(09:16)
+Nb trajet totale pour le bus 418 : 1
+###>
+ligne:1   start:T2(17:02)   end:T1(17:30)
+Nb trajet totale pour le bus 419 : 1
+###>
+Nb trajet totale pour le bus 420 : 0
+###>
+Nb trajet totale pour le bus 421 : 0
+###>
+ligne:5   start:T10(11:42)   end:T11(12:02)
+Nb trajet totale pour le bus 422 : 1
+###>
+ligne:1   start:T2(14:42)   end:T1(15:10)
+ligne:6   start:T2(14:00)   end:T5(14:10)
+ligne:14   start:T14(16:58)   end:T15(17:26)
+Nb trajet totale pour le bus 423 : 3
+###>
+ligne:2   start:T5(07:39)   end:T4(08:03)
+ligne:12   start:T2(17:26)   end:T18(18:15)
+Nb trajet totale pour le bus 424 : 2
+###>
+ligne:5   start:T10(09:10)   end:T11(09:30)
+Nb trajet totale pour le bus 425 : 1
+###>
+ligne:1   start:T1(18:56)   end:T2(19:33)
+ligne:2   start:T5(10:20)   end:T4(10:45)
+Nb trajet totale pour le bus 426 : 2
+###>
+Nb trajet totale pour le bus 427 : 0
+###>
+ligne:4   start:T5(09:10)   end:T7(09:25)
+Nb trajet totale pour le bus 428 : 1
+###>
+Nb trajet totale pour le bus 429 : 0
+###>
+ligne:13   start:T20(16:17)   end:T16(16:51)
+Nb trajet totale pour le bus 430 : 1
+###>
+ligne:3   start:T2(08:44)   end:T4(09:22)
+ligne:11   start:T17(15:40)   end:T16(16:36)
+ligne:14   start:T14(11:52)   end:T15(12:20)
+Nb trajet totale pour le bus 431 : 3
+###>
+ligne:6   start:T5(12:37)   end:T2(12:52)
+ligne:6   start:T5(15:37)   end:T2(15:52)
+Nb trajet totale pour le bus 432 : 2
+###>
+ligne:3   start:T2(09:25)   end:T4(10:03)
+ligne:12   start:T18(13:58)   end:T2(14:45)
+ligne:15   start:T22(7:44)   end:T13(8:04)
+Nb trajet totale pour le bus 433 : 3
+###>
+Nb trajet totale pour le bus 434 : 0
+###>
+ligne:3   start:T2(15:25)   end:T4(16:02)
+Nb trajet totale pour le bus 435 : 1
+###>
+ligne:1   start:T2(20:20)   end:T1(20:45)
+ligne:12   start:T18(12:40)   end:T2(13:27)
+Nb trajet totale pour le bus 436 : 2
+###>
+ligne:1   start:T2(17:22)   end:T1(17:50)
+Nb trajet totale pour le bus 437 : 1
+###>
+Nb trajet totale pour le bus 438 : 0
+###>
+Nb trajet totale pour le bus 439 : 0
+###>
+ligne:1   start:T2(16:42)   end:T1(17:10)
+Nb trajet totale pour le bus 440 : 1
+###>
+Nb trajet totale pour le bus 441 : 0
+###>
+ligne:7   start:T5(17:20)   end:T12(17:51)
+Nb trajet totale pour le bus 442 : 1
+###>
+ligne:15   start:T23(15:52)   end:T22(16:16)
+Nb trajet totale pour le bus 443 : 1
+###>
+ligne:5   start:T10(15:08)   end:T11(15:28)
+Nb trajet totale pour le bus 444 : 1
+###>
+Nb trajet totale pour le bus 445 : 0
+###>
+Nb trajet totale pour le bus 446 : 0
+###>
+Nb trajet totale pour le bus 447 : 0
+###>
+Nb trajet totale pour le bus 448 : 0
+###>
+ligne:14   start:T14(09:50)   end:T15(10:18)
+Nb trajet totale pour le bus 449 : 1
+###>
+Nb trajet totale pour le bus 450 : 0
+###>
+ligne:1   start:T2(08:22)   end:T1(08:50)
+ligne:3   start:T4(13:00)   end:T2(13:30)
+Nb trajet totale pour le bus 451 : 2
+###>
+Nb trajet totale pour le bus 452 : 0
+###>
+ligne:7   start:T12(09:30)   end:T5(09:56)
+Nb trajet totale pour le bus 453 : 1
+###>
+ligne:11   start:T17(07:04)   end:T16(07:58)
+ligne:15   start:T23(10:28)   end:T22(10:52)
+Nb trajet totale pour le bus 454 : 2
+###>
+Nb trajet totale pour le bus 455 : 0
+###>
+ligne:2   start:T5(10:40)   end:T4(11:05)
+ligne:11   start:T17(09:02)   end:T16(09:56)
+Nb trajet totale pour le bus 456 : 2
+###>
+ligne:12   start:T2(19:48)   end:T18(20:36)
+Nb trajet totale pour le bus 457 : 1
+###>
+ligne:3   start:T2(18:30)   end:T4(19:07)
+Nb trajet totale pour le bus 458 : 1
+###>
+ligne:3   start:T4(06:08)   end:T2(06:37)
+Nb trajet totale pour le bus 459 : 1
+###>
+Nb trajet totale pour le bus 460 : 0
+###>
+ligne:1   start:T2(09:42)   end:T1(10:10)
+ligne:1   start:T2(12:42)   end:T1(13:10)
+ligne:6   start:T2(11:00)   end:T5(11:10)
+Nb trajet totale pour le bus 461 : 3
+###>
+ligne:2   start:T4(14:33)   end:T5(14:55)
+ligne:3   start:T2(19:07)   end:T4(19:42)
+ligne:6   start:T2(12:00)   end:T5(12:10)
+ligne:12   start:T2(10:04)   end:T18(10:51)
+ligne:14   start:T14(16:00)   end:T15(16:28)
+Nb trajet totale pour le bus 462 : 5
+###>
+Nb trajet totale pour le bus 463 : 0
+###>
+ligne:14   start:T15(08:23)   end:T14(08:48)
+Nb trajet totale pour le bus 464 : 1
+###>
+Nb trajet totale pour le bus 465 : 0
+###>
+ligne:11   start:T17(07:42)   end:T16(08:36)
+Nb trajet totale pour le bus 466 : 1
+###>
+ligne:12   start:T18(15:49)   end:T2(16:36)
+Nb trajet totale pour le bus 467 : 1
+###>
+ligne:2   start:T4(16:54)   end:T5(17:19)
+ligne:3   start:T2(12:45)   end:T4(13:20)
+Nb trajet totale pour le bus 468 : 2
+###>
+Nb trajet totale pour le bus 469 : 0
+###>
+Nb trajet totale pour le bus 470 : 0
+###>
+Nb trajet totale pour le bus 471 : 0
+###>
+ligne:1   start:T2(10:42)   end:T1(11:10)
+ligne:11   start:T17(08:22)   end:T16(09:16)
+ligne:12   start:T18(09:05)   end:T2(09:52)
+ligne:12   start:T18(11:27)   end:T2(12:14)
+Nb trajet totale pour le bus 472 : 4
+###>
+ligne:10   start:T16(10:49)   end:T15(11:22)
+ligne:10   start:T16(17:10)   end:T14(18:04)
+ligne:11   start:T16(14:38)   end:T17(15:26)
+ligne:12   start:T18(18:54)   end:T2(19:41)
+Nb trajet totale pour le bus 473 : 4
+###>
+ligne:2   start:T5(13:17)   end:T4(13:39)
+Nb trajet totale pour le bus 474 : 1
+###>
+Nb trajet totale pour le bus 475 : 0
+###>
+ligne:5   start:T10(10:52)   end:T11(11:12)
+Nb trajet totale pour le bus 476 : 1
+###>
+ligne:3   start:T2(07:05)   end:T4(07:41)
+ligne:13   start:T16(09:51)   end:T20(10:34)
+Nb trajet totale pour le bus 477 : 2
+###>
+ligne:2   start:T4(10:13)   end:T5(10:39)
+ligne:2   start:T4(17:14)   end:T5(17:39)
+ligne:13   start:T16(13:32)   end:T20(14:19)
+Nb trajet totale pour le bus 478 : 3
+###>
+ligne:2   start:T5(15:37)   end:T4(16:00)
+Nb trajet totale pour le bus 479 : 1
+###>
+ligne:1   start:T2(10:02)   end:T1(10:30)
+ligne:2   start:T5(06:59)   end:T4(07:21)
+ligne:2   start:T5(19:59)   end:T4(20:22)
+Nb trajet totale pour le bus 480 : 3
+###>
+Nb trajet totale pour le bus 481 : 0
+###>
+ligne:1   start:T1(19:56)   end:T2(20:33)
+ligne:6   start:T2(09:00)   end:T5(09:10)
+ligne:12   start:T2(16:49)   end:T18(17:38)
+Nb trajet totale pour le bus 482 : 3
+###>
+ligne:1   start:T2(08:02)   end:T1(08:30)
+ligne:3   start:T4(19:45)   end:T2(20:15)
+Nb trajet totale pour le bus 483 : 2
+###>
+ligne:3   start:T4(10:26)   end:T2(10:56)
+Nb trajet totale pour le bus 484 : 1
+###>
+Nb trajet totale pour le bus 485 : 0
+###>
+ligne:7   start:T5(15:00)   end:T12(15:29)
+Nb trajet totale pour le bus 486 : 1
+###>
+ligne:2   start:T5(13:36)   end:T4(13:59)
+ligne:3   start:T4(11:06)   end:T2(11:36)
+ligne:3   start:T4(18:28)   end:T2(18:58)
+ligne:7   start:T12(15:40)   end:T5(16:06)
+Nb trajet totale pour le bus 487 : 4
+###>
+ligne:3   start:T2(17:45)   end:T4(18:22)
+Nb trajet totale pour le bus 488 : 1
+###>
+ligne:5   start:T11(18:04)   end:T9(18:30)
+Nb trajet totale pour le bus 489 : 1
+###>
+ligne:2   start:T5(15:23)   end:T4(15:46)
+Nb trajet totale pour le bus 490 : 1
+###>
+ligne:3   start:T4(13:46)   end:T2(14:16)
+Nb trajet totale pour le bus 491 : 1
+###>
+Nb trajet totale pour le bus 492 : 0
+###>
+Nb trajet totale pour le bus 493 : 0
+###>
+ligne:1   start:T1(06:34)   end:T2(07:11)
+Nb trajet totale pour le bus 494 : 1
+###>
+ligne:1   start:T2(09:22)   end:T1(09:50)
+Nb trajet totale pour le bus 495 : 1
+###>
+ligne:1   start:T1(17:16)   end:T2(17:53)
+ligne:2   start:T5(19:40)   end:T4(20:03)
+Nb trajet totale pour le bus 496 : 2
+###>
+ligne:4   start:T5(18:10)   end:T7(18:25)
+Nb trajet totale pour le bus 497 : 1
+###>
+ligne:11   start:T16(18:42)   end:T17(19:30)
+Nb trajet totale pour le bus 498 : 1
+###>
+ligne:3   start:T2(16:42)   end:T4(17:19)
+Nb trajet totale pour le bus 499 : 1
+###>
+Nb trajet totale pour le bus 500 : 0
+###>
+Nb trajet totale pour le bus 501 : 0
+###>
+ligne:15   start:T22(15:28)   end:T23(15:51)
+Nb trajet totale pour le bus 502 : 1
+###>
+ligne:2   start:T4(19:55)   end:T5(20:11)
+ligne:7   start:T5(13:50)   end:T12(14:19)
+ligne:10   start:T16(15:16)   end:T15(15:49)
+ligne:12   start:T2(07:38)   end:T18(08:25)
+Nb trajet totale pour le bus 503 : 4
+###>
+Nb trajet totale pour le bus 504 : 0
+###>
+ligne:3   start:T4(05:52)   end:T2(06:20)
+ligne:10   start:T16(12:10)   end:T14(12:58)
+ligne:11   start:T16(09:18)   end:T17(10:06)
+Nb trajet totale pour le bus 505 : 3
+###>
+Nb trajet totale pour le bus 506 : 0
+###>
+ligne:9   start:T13(19:58)   end:T2(20:40)
+ligne:11   start:T17(17:00)   end:T16(17:56)
+ligne:12   start:T18(15:12)   end:T2(15:59)
+Nb trajet totale pour le bus 507 : 3
+###>
+ligne:5   start:T11(15:35)   end:T10(15:57)
+Nb trajet totale pour le bus 508 : 1
+###>
+ligne:11   start:T16(15:58)   end:T17(16:52)
+Nb trajet totale pour le bus 509 : 1
+###>
+ligne:9   start:T2(6:35)   end:T13(7:15)
+Nb trajet totale pour le bus 510 : 1
+###>
+ligne:10   start:T14(06:57)   end:T16(07:32)
+Nb trajet totale pour le bus 511 : 1
+###>
+ligne:6   start:T5(14:37)   end:T2(14:52)
+ligne:13   start:T21(12:04)   end:T16(12:05)
+Nb trajet totale pour le bus 512 : 2
+###>
+ligne:2   start:T4(09:53)   end:T5(10:19)
+ligne:12   start:T2(15:37)   end:T18(16:24)
+Nb trajet totale pour le bus 513 : 2
+###>
+ligne:12   start:T18(09:43)   end:T2(10:30)
+Nb trajet totale pour le bus 514 : 1
+###>
+ligne:5   start:T11(07:58)   end:T10(08:20)
+Nb trajet totale pour le bus 515 : 1
+###>
+ligne:10   start:T15(10:21)   end:T16(10:46)
+Nb trajet totale pour le bus 516 : 1
+###>
+Nb trajet totale pour le bus 517 : 0
+###>
+Nb trajet totale pour le bus 518 : 0
+###>
+ligne:15   start:T22(13:33)   end:T23(13:56)
+Nb trajet totale pour le bus 519 : 1
+###>
+ligne:3   start:T2(10:41)   end:T4(11:19)
+Nb trajet totale pour le bus 520 : 1
+###>
+ligne:5   start:T11(10:30)   end:T10(10:52)
+Nb trajet totale pour le bus 521 : 1
+###>
+Nb trajet totale pour le bus 522 : 0
+###>
+ligne:3   start:T2(14:44)   end:T4(15:21)
+ligne:5   start:T10(08:20)   end:T11(08:40)
+Nb trajet totale pour le bus 523 : 2
+###>
+Nb trajet totale pour le bus 524 : 0
+###>
+Nb trajet totale pour le bus 525 : 0
+###>
+Nb trajet totale pour le bus 526 : 0
+###>
+ligne:2   start:T5(16:39)   end:T4(17:03)
+Nb trajet totale pour le bus 527 : 1
+###>
+ligne:12   start:T18(19:23)   end:T19(19:26)
+Nb trajet totale pour le bus 528 : 1
+###>
+ligne:3   start:T2(13:07)   end:T4(13:42)
+Nb trajet totale pour le bus 529 : 1
+###>
+Nb trajet totale pour le bus 530 : 0
+###>
+ligne:12   start:T18(17:40)   end:T2(18:27)
+Nb trajet totale pour le bus 531 : 1
+###>
+ligne:1   start:T2(19:42)   end:T1(20:07)
+Nb trajet totale pour le bus 532 : 1
+###>
+ligne:11   start:T17(12:22)   end:T16(13:16)
+Nb trajet totale pour le bus 533 : 1
+###>
+ligne:12   start:T2(16:12)   end:T18(17:01)
+Nb trajet totale pour le bus 534 : 1
+###>
+Nb trajet totale pour le bus 535 : 0
+###>
+Nb trajet totale pour le bus 536 : 0
+###>
+ligne:11   start:T17(14:22)   end:T16(15:16)
+ligne:11   start:T16(12:00)   end:T17(12:48)
+Nb trajet totale pour le bus 537 : 2
+###>
+ligne:4   start:T7(18:29)   end:T5(18:37)
+Nb trajet totale pour le bus 538 : 1
+###>
+Nb trajet totale pour le bus 539 : 0
+###>  Result   <###
+Nb trajet totale:539
+		population size: 50
+		population children size: 20
+		selection: roulette
+		count of croisement ADN: 5
+		executed time: 98.88s in 50000000 generation
+Score:
+		max: 539
+		min: 539
