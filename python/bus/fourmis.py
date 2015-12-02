@@ -1,7 +1,6 @@
 # import os, sys, copy
 # lib_path = os.path.abspath(os.path.join('..', '..', '..', 'lib'))
 # sys.path.append(lib_path)
-
 import copy
 
 from Data.data import *
@@ -32,12 +31,11 @@ print majTrajets
 ListFake = [1,2,3]
 ListTotal = copy.deepcopy(ListFake)
 nbIteration = 2
-nbFourmis = 500
+nbFourmis = 50
 
 while len(ListTotal)!=0:
-	for iteration in xrange(1,nbIteration):
-		for fourmis in xrange(1, nbFourmis):
-
+	for iteration in xrange(0,nbIteration):
+		for fourmis in xrange(0, nbFourmis):
 			tabTF = []
 			copyLT = copy.deepcopy(ListTotal)
 			positionActuel = 0
@@ -55,6 +53,3 @@ while len(ListTotal)!=0:
 
 print "liste total " 
 print ListTotal
-
-
-
