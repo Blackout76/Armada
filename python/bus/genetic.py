@@ -12,13 +12,13 @@ if len(sys.argv) > 1:
 	print int(sys.argv[1])
 
 score_objectif = 23333.0000001
-population_size = 100
+population_size = 50
 iteration = 50000000
-child_population_size = 40
+child_population_size = 20
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
-adn_croisement_count = 1
+adn_croisement_count = 5
 
 links = generateLiaisons()
 travels = generateTravels(links)
@@ -35,7 +35,7 @@ while nbBus > 0:
 	adnBase = generateBasicADN(travels)
 	population = createPopulation(population_size, adnBase,nbBus)
 
-	evalPopulation(population,incomp)
+	evalPopulation(population,incomp,travels,links,nbBus)
 
 
 	for i in range(iteration):
@@ -46,7 +46,7 @@ while nbBus > 0:
 		print '		Generation enfants ...'
 		populationChild = generateChildren(incomp,populationParent,adn_croisement_count)
 		print '		Construction nouvelle population ...'
-		population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
+		population = insertInPopulation(incomp,travels,links,population,populationChild,population_size,score_objectif,nbBus)
 		print 'Score:'
 		print '		max: ' + str(population[population_size-1].score) 
 		print '		min: ' + str(population[0].score) 
