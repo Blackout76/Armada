@@ -15,35 +15,51 @@ travels = generateTravels(links)
 #####             Debut ALGO	         #####
 ##############################################
 
-# ListFake = [1,2,3]
-# ListTotal = copy.deepcopy(ListFake)
-# nbIteration = 2
-# nbFourmis = 50
+nbIteration = 2
+nbFourmis = 50
 
-# while len(ListTotal)!=0:
-# 	for iteration in xrange(0,nbIteration):
-# 		for fourmis in xrange(0, nbFourmis):
-# 			tabTF = []
-# 			copyLT = copy.deepcopy(ListTotal)
-# 			positionActuel = 0
-# 			while len(copyLT)!=0:
-# 				#fonction choix du chemin a faire, simulation :
-# 				tabTF.append(copyLT[positionActuel])
-# 				print tabTF
-# 				copyLT = updateList(copyLT,tabTF)
-# 				pass
-# 			#print "iteration: " + str(iteration) + " fourmis: " + str(fourmis)
-# 			pass
-# 		pass
-# 	ListTotal = updateList(ListTotal,tabTF)
-# 	pass
-
-# print "liste total " 
-# print ListTotal
 
 travels2 = generateTravels(links)
-print len(travels2)
+print "travels generer"
 travels3 = listeChrono(travels2)
-print len(travels3)
-#print "pointActuel Heure fin: " + str(travels3[0].endPoint.time.inMin())
-voisinsPossible(travels3, 0)
+print "travels par ordre chrono"
+
+
+# while len(travels3)!=0:
+
+for iteration in xrange(0,nbIteration):
+
+	travelIteration = generateTravels(links)
+	print "travels total iteration generer"
+	travelIterationIteration = listeChrono(travelIteration)
+	print "travels total iteration chrono generer"
+
+	for fourmis in xrange(0, nbFourmis):
+
+		Tk = []
+		travelTotal = generateTravels(links)
+		print "travels total fourmis generer"
+		travelFourmis = listeChrono(travelTotal)
+		print "travels fourmis generer"
+
+		choix = 0
+		Tk.append(travelFourmis[choix])
+
+		while len(travelFourmis) != 0:
+
+			choixPrecedent = choix
+
+			voisins = voisinsPossible(travelIterationIteration, choix)
+			choix = choix + choisirVoisin(voisins)
+			Tk.append(travelIterationIteration[choix])
+
+			supprFourmis = choix-choixPrecedent
+
+			for x in xrange(0,(supprFourmis)):
+				del travelFourmis[x]
+				pass
+
+			pass
+		
+		pass
+	pass

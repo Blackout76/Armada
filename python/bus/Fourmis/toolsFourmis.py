@@ -1,4 +1,5 @@
 import copy
+from random import randint
 
 # def updateList(liste1, liste2):
 # 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
@@ -53,6 +54,8 @@ def voisinsPossible(liste, point):
 	pointActuel = copy.deepcopy(point)
 	pointSuivant = copy.deepcopy(pointActuel) + 1
 
+	sortir = 0
+
 	listeVoisins =  []
 
 	if pointActuel == 0:
@@ -61,13 +64,14 @@ def voisinsPossible(liste, point):
 		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5):
 			listeVoisins.append(liste[pointSuivant])
 			pointSuivant = pointSuivant + 1
-			pass
-		pass
+			if pointSuivant == 538 :
+				break
 
 	else:
 		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5):
 			pointSuivant = pointSuivant + 1
-			pass
+			if pointSuivant == 538 :
+				break
 
 		listeVoisins.append(liste[pointSuivant])
 		pointVoisin = copy.deepcopy(pointSuivant) + 1
@@ -75,14 +79,42 @@ def voisinsPossible(liste, point):
 		while copyListe[pointSuivant].endPoint.time.inMin() > (copyListe[pointVoisin].startPoint.time.inMin() + 5):
 			listeVoisins.append(liste[pointVoisin])
 			pointVoisin = pointVoisin + 1
-			pass
-		pass
+			print pointVoisin
+			if pointVoisin==538 :
+				break
 
-	# for x in xrange(0,len(listeVoisins)):
-	# 	print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
-	# 	pass
+	for x in xrange(0,len(listeVoisins)):
+		print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
+	 
 
 	return listeVoisins
+
+
+def choisirVoisin(liste):
+
+	copyListe = liste
+	tailleL = len(copyListe)
+
+	choix = randint(0, tailleL)
+
+	return choix
+	pass
+
+
+
+
+def pheromone(liste):
+
+	copyListe = liste
+	distanceTotal = 0
+
+	for i in xrange(0,len(copyListe)):
+
+
+
+		pass
+
+
 
 
 # def chooseTravel(pointActuel, listeVoisins):
