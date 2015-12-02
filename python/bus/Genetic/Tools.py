@@ -96,7 +96,7 @@ def insertInPopulation(isValidPop,incomp,travels,links,population,populationChil
 	newPopulation = []
 	
 	for i in range(len(populationChild)):
-		newPopulation.append(populationChild[i],nbBus)
+		newPopulation.append(populationChild[i])
 	# Eval the new population
 	#evalPopulation(newPopulation,incomp,travels,links,nbBus)
 	# Compose the new population
