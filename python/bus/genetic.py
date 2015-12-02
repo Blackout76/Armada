@@ -4,12 +4,17 @@ from Genetic.Individu import *
 from Genetic.Tools import *
 from time import *
 from math import *
+import sys
 
+nbBus = 100
+if len(sys.argv) > 1:
+	nbBus = int(sys.argv[1])
+	print int(sys.argv[1])
 
 score_objectif = 23333.0000001
-population_size = 50
-iteration = 50000
-child_population_size = 45
+population_size = 100
+iteration = 50000000
+child_population_size = 40
 parents_count_min = 2
 parents_count_max = 2
 selection_type = 'roulette' # alea / roulette 
@@ -19,58 +24,76 @@ links = generateLiaisons()
 travels = generateTravels(links)
 incomp = generateIncomp(travels)
 
-print incomp
 
-print len(travels[0].travelUncompatible)
-
-timeStart = time()
-adnBase = generateBasicADN(travels)
-nbBus = 50
-population = createPopulation(population_size, adnBase,nbBus)
-
-evalPopulation(population,incomp)
+#print incomp
+#print len(travels[0].travelUncompatible)
 
 
 
-"""
-bus = []
-for i in range(nbBus+1):
-	bus.append(0)
 
-for j in range(len(population)):
-	for k in range(len(population[j].adn.genes)):
-		bus[population[j].adn.genes[k]] += 1
+while nbBus > 0:
+	timeStart = time()
+	adnBase = generateBasicADN(travels)
+	population = createPopulation(population_size, adnBase,nbBus)
 
-for i in range(len(bus)):
-	print 'Bus ' + str(i) + ' = ' + str(bus[i]*1.0/population_size)
-"""
+	evalPopulation(population,incomp)
 
 
-# print'###################'
+	for i in range(iteration):
+		print 'Generation: ' + str(i)
+		
+		print '		Selection parents ...'
+		populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
+		print '		Generation enfants ...'
+		populationChild = generateChildren(incomp,populationParent,adn_croisement_count)
+		print '		Construction nouvelle population ...'
+		population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
+		print 'Score:'
+		print '		max: ' + str(population[population_size-1].score) 
+		print '		min: ' + str(population[0].score) 
+		if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
+			print 'FOUNDDDDDDDDDDDDDDDDDDDDDDDDdd'
+			break
 
-evalPopulation(population,incomp)
 
-for i in range(iteration):
-	print 'Generation: ' + str(i)
-	
-	print '		Selection parents ...'
-	populationParent = selectPopulationParents(selection_type,population,child_population_size,parents_count_min,parents_count_max)
-	print '		Generation enfants ...'
-	populationChild = generateChildren(populationParent,adn_croisement_count)
-	print '		Construction nouvelle population ...'
-	population = insertInPopulation(incomp,population,populationChild,population_size,score_objectif,nbBus)
+
+	total = 0
+	lines = []
+	for j in range(nbBus+1):
+		print'###>'
+		lines.append('###>')
+		nbTrajetbus = 0
+		for i in range(len(population[0].adn)):
+			if population[0].adn[i] == j:
+				print'	' + travels[i].toString()
+				lines.append(travels[i].toString())
+				nbTrajetbus += 1
+		total += nbTrajetbus
+		print 'Nb trajet totale pour le bus ' + str(j) +' : ' + str(nbTrajetbus)
+		lines.append('Nb trajet totale pour le bus ' + str(j) +' : ' + str(nbTrajetbus))
+
+	lines.append('###>  Result   <###')
+	lines.append('Nb trajet totale:' + str(total))
+	print 'Nb trajet totale:' + str(total)
+	#printPopulation(population)
+
+	print 'Results:'
+	print '		population size: ' + str(population_size)
+	lines.append('		population size: ' + str(population_size))
+	print '		population children size: ' + str(child_population_size)
+	lines.append('		population children size: ' + str(child_population_size))
+	print '		selection: ' + selection_type
+	lines.append('		selection: ' + selection_type)
+	print '		count of croisement ADN: ' + str(adn_croisement_count)
+	lines.append('		count of croisement ADN: ' + str(adn_croisement_count))
+	print '		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation'
+	lines.append('		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation')
 	print 'Score:'
+	lines.append('Score:')
 	print '		max: ' + str(population[population_size-1].score) 
-	print '		min: ' + str(population[0].score) 
-
-#printPopulation(population)
-
-print 'Results:'
-print '		population size: ' + str(population_size)
-print '		population children size: ' + str(child_population_size)
-print '		selection: ' + selection_type
-print '		count of croisement ADN: ' + str(adn_croisement_count)
-print '		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation'
-print 'Score:'
-print '		min: ' + str(population[population_size-1].score) 
-print '		max: ' + str(population[0].score)
+	lines.append('		max: ' + str(population[population_size-1].score))
+	print '		min: ' + str(population[0].score)
+	lines.append('		min: ' + str(population[0].score))
+	saveIndividu(nbBus,lines)
+	nbBus -= 1
+>>>>>>> cefffacbebd4cbd8648cba2a5862c5aec069d7dd
