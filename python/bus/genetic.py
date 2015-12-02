@@ -6,18 +6,21 @@ from time import *
 from math import *
 import sys
 
-nbBus = 200
+nbBus = 100
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
-	print "Bus number : " + int(sys.argv[1])
+	print "Bus numb1r : " + int(sys.argv[1])
 
-population_size = 50
-iteration = 50000000
-child_population_size = 20
-parents_count_min = 2
-parents_count_max = 2
+print 'Loading ... '
+population_size = 100
+iteration = 15000
+child_population_size = 50
+parents_count_min = 3
+parents_count_max = 10
 selection_type = 'roulette' # alea / roulette 
-adn_croisement_count = 1
+adn_croisement_count_min = 1
+adn_croisement_count_max = 20
+countTryToProduceChild = 1
 
 links = generateLiaisons()
 travels = generateTravels(links)
@@ -26,8 +29,9 @@ incomp = generateIncomp(travels)
 
 #while nbBus > 0:
 timeStart = time()
-population = createPopulation(population_size,travels,nbBus)
-
+print 'Initialisation population 0 ... '
+population = createPopulation2(population_size,travels,nbBus)
+print 'Evaluation population 0 ... '
 evalPopulation(population,incomp,travels,links,nbBus)
 
 isValidPop = False
@@ -37,17 +41,20 @@ for i in range(iteration):
 	print '		Selection parents ...'
 	populationParent = selectPopulationParents(isValidPop,selection_type,population,child_population_size,parents_count_min,parents_count_max)
 	print '		Generation enfants ...'
-	populationChild = generateChildren(isValidPop,incomp,travels,links,nbBus,populationParent,adn_croisement_count)
+	populationChild = generateChildren(isValidPop,incomp,travels,links,nbBus,populationParent,adn_croisement_count_min,adn_croisement_count_max,countTryToProduceChild)
 	print '		Construction nouvelle population ...'
 	population = insertInPopulation(isValidPop,incomp,travels,links,population,populationChild,population_size,nbBus)
 	print '		Score:'
-	print '			max: ' + str(population[population_size-1].score) + '	Time: ' + str(population[population_size-1].scoreTime) + 'min	Dist:'  + str(population[population_size-1].scoreDist)  
-	print '			min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist:'  + str(population[0].scoreDist)  
-	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539 and not isValidPop:
-		break
-		evalPopulation(population,incomp,travels,links,nbBus)
+	if isValidPop:
+		print '			min: ' + str(population[population_size-1].scoreAdvancedToString())
+		print '			max: ' + str(population[0].scoreAdvancedToString())
+	else:
+		print '			max: ' + str(population[population_size-1].score) 
+		print '			min: ' + str(population[0].score) 
+	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
+		if not isValidPop:
+			evalPopulation(population,incomp,travels,links,nbBus)
 		isValidPop = True
-		print 'aloooooooooooooooooo'
 	else:
 		isValidPop = False
 

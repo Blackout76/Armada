@@ -8,7 +8,7 @@ class Roulette():
 
 	def addItem(self,item_id,item_score):
 		if self.reverse:
-			item_score = 1.0 / item_score * 1000000.0
+			item_score = 1.0 / float(item_score) * 1000000.0
 		self.items.append(RouletteItem(item_id,item_score))
 
 	def load(self):
@@ -22,7 +22,7 @@ class Roulette():
 			scorePrevious = self.items[i].score
 
 	def randomId(self):
-		val = randint(0,self.total)
+		val = randint(0,int(self.total+1))
 		for i in range(len(self.items)): 
 			if val <= self.items[i].score:
 				return self.items[i].id
