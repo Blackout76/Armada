@@ -9,9 +9,9 @@ import thread
 ##############################################
 #####          GENETIC FUNCTION         ######
 ##############################################
-def evalPopulation(population,incomp):
+def evalPopulation(population,incomp,travels,links,nbBus):
 	for i in range(len(population)):
-		population[i].computeScore2(incomp)
+		population[i].computeScore(incomp,travels,links,nbBus)
 		
 		
 
@@ -61,19 +61,11 @@ def generateChildren(incomp,populationParent,adnCroisementCount):
 		valid = False
 		childGenes = []
 
+		childGenes = []
+		croisementIndex = randint(1,len(populationParent[i][0].adn)-1)
 
-		while not valid:
-			childGenes = []
-			croisementIndex = randint(1,len(populationParent[i][0].adn)-1)
-
-			childGenes = populationParent[i][0].adn[:croisementIndex] + populationParent[i][0].adn[-(len(populationParent[i][1].adn)-croisementIndex):]
-			valid = True
-			#child = Individu(childGenes)
-			#child.computeScore2(incomp)
-
-			#if child.score >= populationParent[i][0].score or child.score >= populationParent[i][1].score:
-			children.append(Individu(childGenes))
-				#valid = True
+		childGenes = populationParent[i][0].adn[:croisementIndex] + populationParent[i][0].adn[-(len(populationParent[i][1].adn)-croisementIndex):]
+		children.append(Individu(childGenes))
 
 
 	return children
@@ -84,13 +76,13 @@ def createPopulation(populationSize,adnBase,nbBus):
 		population.append(createIndividu(adnBase,nbBus))
 	return population
 
-def insertInPopulation(incomp,population,populationChild,populationSize,scoreObjectif,nbBus):
+def insertInPopulation(incomp,travels,links,population,populationChild,populationSize,nbBus):
 	newPopulation = []
 	
 	for i in range(len(populationChild)):
 		newPopulation.append(mutate(populationChild[i],nbBus))
 	# Eval the new population
-	evalPopulation(newPopulation,incomp)
+	evalPopulation(newPopulation,incomp,travels,links,nbBus)
 	# Compose the new population
 	for i in range(len(population)):
 		newPopulation.append(population[i])
