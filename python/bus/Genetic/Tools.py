@@ -115,8 +115,9 @@ def insertInPopulation(isValidPop,incomp,travels,links,population,populationChil
 
 def mutate(individu,nbBus):
 	if (randint(0,10000)/10000) < 0.075:
-		mutateIndex = randint(0,len(individu.adn)-1)
-		individu.adn[mutateIndex] = randint(0,nbBus)
+		for i in range(len(individu.adn)):
+			if (randint(0,100000)/100000) < 0.002:
+				individu.adn[i] = randint(0,nbBus)
 	return individu
 
 def createIndividu(adnBase,nbBus):
