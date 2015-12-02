@@ -5,6 +5,7 @@ class Individu(object):
 		self.score = 0
 		self.scoreDist = 0
 		self.scoreTime = 0
+		self.scoreTotal = 0
 		self.adn = adn
 	
 	def toString(self):
@@ -41,13 +42,13 @@ class Individu(object):
 						lastTravelEndPointName = busTravels[travelIndex].endPoint.name
 					else:
 						self.scoreDist += int(links.get(str(lastTravelEndPointName) + ':' + str(busTravels[travelIndex].startPoint.name)).dist)
-						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + str(busTravels[travelIndex].startPoint.name)).time)
+						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + str(busTravels[travelIndex].startPoint.name)).time) + 5
 						lastTravelEndPointName = busTravels[travelIndex].endPoint.name
 
 					if travelIndex == len(busTravels):
 						self.scoreDist += int(links.get(str(lastTravelEndPointName) + ':' + 'T0').dist)
-						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + 'T0').time)
-
+						self.scoreTime += int(links.get(str(lastTravelEndPointName) + ':' + 'T0').time) + 5
+		self.scoreTotal = float(self.scoreTime*25/60) +  self.scoreDist
 
 
 

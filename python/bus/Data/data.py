@@ -76,7 +76,7 @@ def generateTravelsOfLine(nameline,terminus,dist,lineType):
 
 		startPoint = TravelPoint( terminusDecoded[terminusIndexStart][0], TravelTime(terminusDecoded[terminusIndexStart][i+1].split(':')) )
 		endPoint = TravelPoint( terminusDecoded[terminusIndexEnd][0], TravelTime(terminusDecoded[terminusIndexEnd][i+1].split(':'))  )
-		travels.append(Travel(nameline, lineType, i, startPoint,endPoint,distDecoded[i+1]))
+		travels.append(Travel(nameline, lineType, i+1, startPoint,endPoint,distDecoded[i+1]))
 	return travels
 
 def generateLinksTravels(travels,links):
@@ -107,5 +107,27 @@ def generateLiaisons():
 def saveIndividu (nbBus,messageLines):
 	file = open('Data/Save/' + str(nbBus) + '_individu_' + str(time()) +'.csv', 'w')
 	for l in messageLines:
+		file.write(l)
+		file.write("\n")
+
+
+def exportIndividu(nbBus,individu,travels):
+	total = 0
+	lines = []
+	for j in range(nbBus+1):
+		nbTrajetbus = 0
+		strtraj = ''
+		for i in range(len(individu.adn)):
+			if individu.adn[i] == j:
+				strtraj += ',l'+str(travels[i].lineName)+':'+travels[i].lineType+':v'+str(travels[i].lineNumber)
+				nbTrajetbus += 1
+		total += nbTrajetbus
+		lines.append('bus' + str(j)+strtraj)
+
+	lines.insert(0,str(nbBus)+','+str(individu.scoreTime)+','+str(individu.scoreDist))
+	lines.insert(0,'#Bentoumi Feth-Allah, Bosch I Sais Jordi, Casol Nicolas, Jouet Jeremie, Leger Olivier, Menet Cedric')
+
+	file = open('Data/Save/' + str(nbBus) + '_equipe2_' + str(time()) +'.csv', 'w')
+	for l in lines:
 		file.write(l)
 		file.write("\n")
