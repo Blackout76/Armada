@@ -24,7 +24,7 @@ print travels[33].lineNumber
 print travels[53].lineType
 print travels[53].lineNumber
 
-#print incomp
+print incomp
 #print len(travels[0].travelUncompatible)
 
 timeStart = time()
