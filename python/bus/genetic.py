@@ -9,7 +9,7 @@ import sys
 nbBus = 100
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
-	print int(sys.argv[1])
+	print "Bus number : " + int(sys.argv[1])
 
 score_objectif = 23333.0000001
 population_size = 100
@@ -96,4 +96,3 @@ while nbBus > 0:
 	lines.append('		min: ' + str(population[0].score))
 	saveIndividu(nbBus,lines)
 	nbBus -= 1
->>>>>>> cefffacbebd4cbd8648cba2a5862c5aec069d7dd
