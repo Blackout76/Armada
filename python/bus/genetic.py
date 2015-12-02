@@ -9,25 +9,23 @@ import sys
 nbBus = 100
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
-	print "Bus numb1r : " + int(sys.argv[1])
+	print "Bus number : " + int(sys.argv[1])
 
 print 'Loading ... '
 population_size = 100
-iteration = 15000
-child_population_size = 50
-parents_count_min = 3
-parents_count_max = 10
+iteration = 50000
+child_population_size = 20
+parents_count_min = 2
+parents_count_max = 8
 selection_type = 'roulette' # alea / roulette 
 adn_croisement_count_min = 1
-adn_croisement_count_max = 20
-countTryToProduceChild = 1
+adn_croisement_count_max = 150
+countTryToProduceChild = 10
 
 links = generateLiaisons()
 travels = generateTravels(links)
 incomp = generateIncomp(travels)
 
-
-#while nbBus > 0:
 timeStart = time()
 print 'Initialisation population 0 ... '
 population = createPopulation2(population_size,travels,nbBus)
@@ -54,12 +52,14 @@ for i in range(iteration):
 	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
 		if not isValidPop:
 			evalPopulation(population,incomp,travels,links,nbBus)
+		if iteration % 2000 == 0:
+			exportIndividu2(population[population_size-1].scoreBus,population[population_size-1],travels)
 		isValidPop = True
 	else:
 		isValidPop = False
 
 
-exportIndividu(nbBus,population[population_size-1],travels)
+exportIndividu2(population[population_size-1].scoreBus,population[population_size-1],travels)
 
 total = 0
 lines = []
@@ -88,8 +88,6 @@ print '		population children size: ' + str(child_population_size)
 lines.append('		population children size: ' + str(child_population_size))
 print '		selection: ' + selection_type
 lines.append('		selection: ' + selection_type)
-print '		count of croisement ADN: ' + str(adn_croisement_count)
-lines.append('		count of croisement ADN: ' + str(adn_croisement_count))
 print '		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation'
 lines.append('		executed time: ' + str(round((time() - timeStart)*100)/100) + 's in ' + str(iteration) + ' generation')
 print 'Score:'
@@ -99,4 +97,4 @@ lines.append('		max: ' + str(population[population_size-1].score) + '	' + str(po
 print '		min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist:'  + str(population[0].scoreDist) 
 lines.append('		min: ' + str(population[0].score) + '	Time: ' + str(population[0].scoreTime) + 'min	Dist'  + str(population[0].scoreDist))
 saveIndividu('test_'+str(nbBus),lines)
-#nbBus -= 5
+

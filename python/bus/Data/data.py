@@ -131,3 +131,28 @@ def exportIndividu(nbBus,individu,travels):
 	for l in lines:
 		file.write(l)
 		file.write("\n")
+
+def exportIndividu2(nbBus,individu,travels):
+	lines = []
+	buslistTravels = [[] for i in range(len(travels))]
+
+	for i in range(len(individu.adn)):
+		buslistTravels[individu.adn[i]].append(travels[i])
+
+	indexBus = 0
+	for busTravels in buslistTravels:
+		if len(busTravels) > 0:
+			strtraj = 'bus' + str(indexBus)
+			for travel in busTravels:
+				strtraj += ',l'+str(travel.lineName)+':'+travel.lineType+':v'+str(travel.lineNumber)
+			indexBus += 1
+			lines.append(strtraj)
+			
+
+	lines.insert(0,str(nbBus)+','+str(individu.scoreTime)+','+str(individu.scoreDist))
+	lines.insert(0,'#Bentoumi Feth-Allah, Bosch I Sais Jordi, Casol Nicolas, Jouet Jeremie, Leger Olivier, Menet Cedric')
+
+	file = open('Data/Save/' + str(nbBus) + '_equipe2_' + str(time()) +'.csv', 'w')
+	for l in lines:
+		file.write(l)
+		file.write("\n")

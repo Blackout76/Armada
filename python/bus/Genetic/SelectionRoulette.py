@@ -8,7 +8,7 @@ class Roulette():
 
 	def addItem(self,item_id,item_score):
 		if self.reverse:
-			item_score = 1.0 / float(item_score) * 1000000.0
+			item_score = 1.0 / float(item_score) * 10000000.0
 		self.items.append(RouletteItem(item_id,item_score))
 
 	def load(self):
