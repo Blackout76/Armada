@@ -12,8 +12,9 @@ if len(sys.argv) > 1:
 	print "Bus number : " + int(sys.argv[1])
 
 print 'Loading ... '
+modePopViable = True
 population_size = 100
-iteration = 500000
+iteration = 50000000
 child_population_size = 20
 parents_count_min = 2
 parents_count_max = 8
@@ -28,8 +29,10 @@ incomp = generateIncomp(travels)
 
 timeStart = time()
 print 'Initialisation population 0 ... '
-population = createPopulation2(population_size,travels,nbBus)
-#population = createPopulation(population_size,travels,nbBus)
+if modePopViable:
+	population = createPopulation2(population_size,travels,nbBus)
+else:
+	population = createPopulation(population_size,travels,nbBus)
 print 'Evaluation population 0 ... '
 evalPopulation(population,incomp,travels,links,nbBus)
 
