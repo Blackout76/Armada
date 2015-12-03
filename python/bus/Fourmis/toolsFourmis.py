@@ -1,5 +1,7 @@
 import copy
 from random import randint
+from Data.Travel import *
+from time import *
 
 # def updateList(liste1, liste2):
 # 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
@@ -15,35 +17,19 @@ from random import randint
 
 def updateList(liste1, liste2):
 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
-
-	for i in range(len(liste2)):
-		for j in range(len(liste1)):
-			if liste2[i] == liste1[j]:
-				del liste1[j]
-				break
+	print len(liste1)
+	liste1 = list(set(liste1) - set(liste2))
+	# for i in range(len(liste2)):
+	# 	for j in range(len(liste1)):
+	# 		if liste2[i] == liste1[j]:
+	# 			del liste1[j]
+	# 			break
+	print len(liste1)
 
 def listeChrono(liste):
-	copyListe = liste
-	tailleL = len(copyListe)
-	listeChro = []
-
-	for i in xrange(0,tailleL):
-
-		tailleCopy = len(copyListe)
-		heureMin= 0
-		
-		for j in xrange(0,tailleCopy):
-			if copyListe[heureMin].startPoint.time.inMin() > copyListe[j].startPoint.time.inMin():
-				heureMin = j
-				pass
-			pass
-		listeChro.append(copyListe[heureMin])
-		updateList(copyListe,listeChro)
-		pass
-
-	# for x in xrange(0,len(listeChro)):
-	# 	print "Trajet" + str(x) + " " + str(listeChro[x].startPoint.time.hour) + ":" + str(listeChro[x].startPoint.time.min)
-	# 	pass
+	
+	listeChro = list(liste)
+	listeChro.sort(key = lambda x: x.startPoint.time.inMin(), reverse = False)
 
 	return listeChro
 
@@ -155,17 +141,16 @@ def move(travelStart, path, links):
 	realisable = []
 	if len(voisins)>0:
 		for v in voisins[0].travelUncompatible:
-			if v.startPoint.time.inMin() >= voisins[0].startPoint.time.inMin():
+			if v.startPoint.time.inMin() >= voisins[0].startPoint.time.inMin() and v != voisins[0]:
 				realisable.append(v)
 
-	if len(realisable)>0:
+	if len(realisable)>1:
 		return move(choiceNextTravel(travelStart,realisable,links), path,links)
 	else:
 		return path
 
 def choiceNextTravel(travelStart,travels,links):
-
-	travel = travels[randint(0, len(travels)-1)]
+	travel = travels[randint(1, len(travels)-1)] #OLIIIIIIIIIIIIIIIIIVER
 
 	pheromone=[0 for x in travels]
  	visibilite=[0 for x in travels]
@@ -186,6 +171,7 @@ def choiceNextTravel(travelStart,travels,links):
 	 		if visibilite[i] > probMax:
 	 			probMax=visibilite[i]
 	 			nextTravel = travels[i]
+
 	else:
 		for i in range(len(probChoisir)):
 	 		probChoisir[i] = (pheromone[i] * visibilite[i]) / total 
@@ -226,5 +212,81 @@ def evapore(travels):
 	for t in travels:
 		t.pheromones *= 0.5
 
+def actualiseTravels(travels,path):
+	for pathTravel in path:
+		for travel in travels:
+			if pathTravel in travel.travelAfter:
+				del travel.travelAfter[travel.travelAfter.index(pathTravel)]
+			if pathTravel in travel.travelUncompatible:
+				del travel.travelUncompatible[travel.travelUncompatible.index(pathTravel)]
+	for pathTravel in path:
+		del travels[travels.index(pathTravel)]
 
 
+
+
+def addPathToBusList(busList,path):
+	busTravel = []
+	for pathTravel in path:
+		lineName = pathTravel.lineName
+		lineType = pathTravel.lineType
+		lineNumber = pathTravel.lineNumber
+		dist = pathTravel.dist
+		startPoint = TravelPoint(pathTravel.startPoint.name,TravelTime([pathTravel.startPoint.time.hour,pathTravel.startPoint.time.min]))
+		endPoint = TravelPoint(pathTravel.endPoint.name,TravelTime([pathTravel.endPoint.time.hour,pathTravel.endPoint.time.min]))
+
+		busTravel.append(Travel(lineName, lineType, lineNumber, startPoint, endPoint, dist))
+	busList.append(busTravel)
+
+
+def saveBuslist(bus,links):
+	print 'nb bus' + str(len(bus))
+
+	lines=[]
+	lineTest=[]
+	countBus = 1
+
+	for v in bus:
+		stringline = 'bus'+ str(countBus)
+		lineTest.append('bus'+ str(countBus))
+		for travel in v:
+			stringline += ',l'+str(travel.lineName)+':'+travel.lineType+':v'+str(travel.lineNumber)
+			lineTest.append('	'+travel.toString())
+		lines.append(stringline)
+		countBus+=1
+
+
+	jeVeuxUneDistance = 0
+	for i in range(len(bus)):
+		for j in range(len(bus[i])):
+			if(j==0):
+				jeVeuxUneDistance += int(links[(str(bus[i][0].startPoint.name) + ":T0")].dist)
+			elif(j==len(bus[i])-1):
+				jeVeuxUneDistance += int(links[(str(bus[i][len(bus[i])-1].endPoint.name) + ":T0")].dist)
+			if(j!=0):
+				jeVeuxUneDistance += int(links[(str(bus[i][j].startPoint.name) + ':' + str(bus[i][j-1].endPoint.name))].dist)
+			jeVeuxUneDistance += int(bus[i][j].dist)		
+
+	jeVeuxUnTemps = 0
+	for i in range(len(bus)):
+		depart = int(bus[i][0].startPoint.time.hour)*60 + int(bus[i][0].startPoint.time.min)
+		arrive = int(bus[i][(len(bus[i])-1)].endPoint.time.hour)*60 + int(bus[i][(len(bus[i])-1)].endPoint.time.min)
+		jeVeuxUnTemps += arrive - depart
+		jeVeuxUnTemps += int(links[("T0:" + bus[i][0].startPoint.name)].time)
+		jeVeuxUnTemps += int(links[("T0:" + bus[i][(len(bus[i])-1)].endPoint.name)].time)
+
+
+	lines.insert(0,str(len(bus))+','+str(jeVeuxUnTemps)+','+str(jeVeuxUneDistance))	
+	lines.insert(0,'#Bentoumi Feth-Allah, Bosch I Sais Jordi, Casol Nicolas, Jouet Jeremy, Leger Olivier, Menet Cedric')
+
+	file = open('Data/Save/Fourmis/' + str(len(bus)) + '_Enforce_' + str(time()) +'.csv', 'w')
+	for l in lines:
+		file.write(l)
+		file.write("\n")
+
+
+	file = open('Data/Save/Fourmis/' + str(len(bus)) + '_EnforceTest_' + str(time()) +'.csv', 'w')
+	for l in lineTest:
+		file.write(l)
+		file.write("\n")
+	return
