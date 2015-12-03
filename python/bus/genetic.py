@@ -56,7 +56,7 @@ for i in range(iteration):
 	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
 		if not isValidPop:
 			evalPopulation(population,incomp,travels,links,nbBus)
-			if i != 0:
+			if i != 0 and not modePopViable:
 				break
 		if i % 2000 == 0 and i != 0:
 			exportIndividu2(population[population_size-1].scoreBus,population[population_size-1],travels)
