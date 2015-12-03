@@ -6,14 +6,14 @@ from time import *
 from math import *
 import sys
 
-nbBus = 30
+nbBus = 106
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
 	print "Bus number : " + int(sys.argv[1])
 
 print 'Loading ... '
-modePopViable = True
-population_size = 100
+modePopViable = False
+population_size = 50
 iteration = 50000000
 child_population_size = 20
 parents_count_min = 2

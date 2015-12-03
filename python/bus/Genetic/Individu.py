@@ -46,22 +46,26 @@ class Individu(object):
 					self.scoreBus +=1
 					busTravels.sort(key=lambda x: int(x.startPoint.time.hour) * 60 + int(x.startPoint.time.min), reverse=False)
 					lastTravelEndPointName = ''
+					timeStart = 0
+					timeEnd = 0
 					for travelIndex in range(len(busTravels)):
 						self.scoreDist += int(busTravels[travelIndex].dist)
-						self.scoreTime += int(busTravels[travelIndex].endPoint.time.inMin()) - int(busTravels[travelIndex].startPoint.time.inMin())
 						if travelIndex == 0:
 							#print links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).dist
 							self.scoreDist += int(links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).dist)
 							self.scoreTime += int(links.get(str('T0' + ':' + busTravels[travelIndex].startPoint.name)).time)
+							timeStart = busTravels[travelIndex].startPoint.time.inMin()
 							lastTravelEndPointName = busTravels[travelIndex].endPoint.name
 						else:
 							self.scoreDist += int(links.get(str(lastTravelEndPointName + ':' + busTravels[travelIndex].startPoint.name)).dist)
-							self.scoreTime += int(links.get(str(lastTravelEndPointName + ':' + busTravels[travelIndex].startPoint.name)).time) + 5
 							lastTravelEndPointName = busTravels[travelIndex].endPoint.name
+							timeEnd = busTravels[travelIndex].endPoint.time.inMin()
 
 						if travelIndex == len(busTravels)-1:
 							self.scoreDist += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).dist)
-							self.scoreTime += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).time) + 5
+							self.scoreTime += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).time)
+
+					self.scoreTime += int(timeEnd - timeStart)
 			#self.scoreTotal = (float(self.scoreTime*25.0/60.0) + self.scoreDist) / (self.scoreBusChaine)
 			#self.scoreTotal = (float(self.scoreTime*25.0/60.0) + self.scoreDist)
 			if self.scoreBus > 0:
