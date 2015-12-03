@@ -11,7 +11,7 @@ import thread
 ##############################################
 def evalPopulation(population,incomp,travels,links,nbBus):
 	for i in range(len(population)):
-		population[i].computeScore(incomp,travels,links,nbBus)
+		population[i].computeScoreNEW(incomp,travels,links,nbBus)
 		
 def selectPopulationParents(isValidPop,type,population,child_population_size,parents_count_min,parents_count_max):
 	if type == 'alea':
@@ -91,7 +91,7 @@ def generateChild(isValidPop,indexParent,incomp,travels,links,nbBus,populationPa
 
 	child = Individu(childGenes)
 	if isValidPop:
-		child.computeScore(incomp,travels,links,nbBus)
+		child.computeScoreNEW(incomp,travels,links,nbBus)
 	return child
 
 def insertInPopulation(isValidPop,incomp,travels,links,population,populationChild,populationSize,nbBus):
