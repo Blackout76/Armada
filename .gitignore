@@ -1,0 +1,12 @@
+python/bus/Data/Travel.pyc
+python/bus/Data/__init__.pyc
+python/bus/Data/data.pyc
+python/bus/Genetic/ADN.pyc
+python/bus/Genetic/Individu.pyc
+python/bus/Genetic/SelectionRoulette.pyc
+python/bus/Genetic/Tools.pyc
+python/bus/Genetic/__init__.pyc
+Gne/Gene.py
+Gne/Individu.py
+Gne/geenrator.py
+Gne/generator.py
