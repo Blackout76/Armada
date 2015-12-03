@@ -15,13 +15,11 @@ from random import randint
 
 def updateList(liste1, liste2):
 	# la liste 1 a maj a partir de la liste 2 .... liste1 - liste2 si meme valeur
-	copyL1 = liste1
-	copyL2 = liste2
 
-	for i in range(len(copyL2)):
-		for j in range(len(copyL1)):
-			if copyL2[i] == copyL1[j]:
-				del copyL1[j]
+	for i in range(len(liste2)):
+		for j in range(len(liste1)):
+			if liste2[i] == liste1[j]:
+				del liste1[j]
 				break
 
 def listeChrono(liste):
@@ -49,76 +47,76 @@ def listeChrono(liste):
 
 	return listeChro
 
-def voisinsPossible(liste, point):
-	copyListe = liste
-	pointActuel = copy.deepcopy(point)
-	pointSuivant = copy.deepcopy(pointActuel) + 1
+# def voisinsPossible(liste, point):
+# 	copyListe = liste
+# 	pointActuel = copy.deepcopy(point)
+# 	pointSuivant = copy.deepcopy(pointActuel) + 1
 
-	sortir = 0
+# 	sortir = 0
 
-	listeVoisins =  []
+# 	listeVoisins =  []
 
-	if pointActuel == 0:
-		listeVoisins.append(liste[pointActuel])
+# 	if pointActuel == 0:
+# 		listeVoisins.append(liste[pointActuel])
 
-		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
-			listeVoisins.append(liste[pointSuivant])
-			pointSuivant = pointSuivant + 1
-			if pointSuivant == 538 :
-				sortir = 1
+# 		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
+# 			listeVoisins.append(liste[pointSuivant])
+# 			pointSuivant = pointSuivant + 1
+# 			if pointSuivant == 538 :
+# 				sortir = 1
 
-	else:
-		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
-			pointSuivant = pointSuivant + 1
-			if pointSuivant == 538 :
-				sortir = 1
+# 	else:
+# 		while copyListe[pointActuel].endPoint.time.inMin() > (copyListe[pointSuivant].startPoint.time.inMin() + 5) and sortir == 0:
+# 			pointSuivant = pointSuivant + 1
+# 			if pointSuivant == 538 :
+# 				sortir = 1
 
-		listeVoisins.append(liste[pointSuivant])
-		pointVoisin = copy.deepcopy(pointSuivant) + 1
+# 		listeVoisins.append(liste[pointSuivant])
+# 		pointVoisin = copy.deepcopy(pointSuivant) + 1
 
-		while copyListe[pointSuivant].endPoint.time.inMin() > (copyListe[pointVoisin].startPoint.time.inMin() + 5) and sortir == 0:
-			listeVoisins.append(liste[pointVoisin])
-			pointVoisin = pointVoisin + 1
-
-
-
-			print pointVoisin
+# 		while copyListe[pointSuivant].endPoint.time.inMin() > (copyListe[pointVoisin].startPoint.time.inMin() + 5) and sortir == 0:
+# 			listeVoisins.append(liste[pointVoisin])
+# 			pointVoisin = pointVoisin + 1
 
 
 
-			if pointVoisin==538 :
-				sortir = 1
+# 			print pointVoisin
 
-	for x in xrange(0,len(listeVoisins)):
-	 	print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
+
+
+# 			if pointVoisin==538 :
+# 				sortir = 1
+
+# 	for x in xrange(0,len(listeVoisins)):
+# 	 	print "Trajet" + str(x) + " " + str(listeVoisins[x].startPoint.time.hour) + ":" + str(listeVoisins[x].startPoint.time.min) + " " + str(listeVoisins[x].endPoint.time.hour) + ":" + str(listeVoisins[x].endPoint.time.min)
 	 
 
-	return listeVoisins
+# 	return listeVoisins
 
 
-def choisirVoisin(liste):
+# def choisirVoisin(liste):
 
-	copyListe = liste
-	tailleL = len(copyListe)
+# 	copyListe = liste
+# 	tailleL = len(copyListe)
 
-	choix = randint(1, tailleL)
+# 	choix = randint(1, tailleL)
 
-	return choix
-	pass
-
-
-
-
-def pheromone(liste):
-
-	copyListe = liste
-	distanceTotal = 0
-
-	for i in xrange(0,len(copyListe)):
+# 	return choix
+# 	pass
 
 
 
-		pass
+
+# def pheromone(liste):
+
+# 	copyListe = liste
+# 	distanceTotal = 0
+
+# 	for i in xrange(0,len(copyListe)):
+
+
+
+# 		pass
 
 
 
@@ -166,13 +164,13 @@ def move(travelStart, path, links):
 		return path
 
 def choiceNextTravel(travelStart,travels,links):
+
 	travel = travels[randint(0, len(travels)-1)]
 
 	pheromone=[0 for x in travels]
  	visibilite=[0 for x in travels]
  	probChoisir=[0 for x in travels]
  	total = 0
-
 
  	for i in range(len(travels)):
  		pheromone[i] = travels[i].pheromones
@@ -182,6 +180,7 @@ def choiceNextTravel(travelStart,travels,links):
 
 	probMax = 0
  	nextTravel = 0
+
  	if total == 0:
  		for i in range(len(visibilite)):
 	 		if visibilite[i] > probMax:
@@ -217,6 +216,7 @@ def computePath(path,links):
 			scoreDist += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).dist)
 			scoreTime += int(links.get(str(lastTravelEndPointName + ':' + 'T0')).time) + 5
 	return [scoreTime,scoreDist]
+
 
 def putPheromones(path,score):
 	for p in path:

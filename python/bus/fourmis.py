@@ -15,7 +15,7 @@ from Fourmis.toolsFourmis import *
 #####             Debut ALGO	         #####
 ##############################################
 
-nbIteration = 10
+nbIteration = 1
 nbFourmis = 10
 links = generateLiaisons()
 print "links generer"
@@ -24,23 +24,36 @@ print "travels generer"
 travels2 = listeChrono(travels)
 print "travels par ordre chrono"
 
-for j in range(nbIteration):
-	for i in range(nbFourmis):
-		print '-------'
-		path =[]
-		premierVoyage = travels2[0].travelUncompatible
 
-		if (premierVoyage != 0):
-			choix = randint(0, len(premierVoyage)-1)
-			path = move(travels2[choix], [travels2[0]],links)
-		else:
-			path = move(travels2[0], [travels2[0]],links)
+while len(travels2) != 0:
 
-		score = computePath(path,links)
-		putPheromones(path,score)
-		for t in path:
-			print t.toString() + '   pheromones:' + str(t.pheromones)
-	evapore(travels)
+ 	for x in range(len(travels2)):
+ 		travels2[x].pheromones = 0
+
+	for j in range(nbIteration):
+		for i in range(nbFourmis):
+			print '--------------- Iteration: ' + str(j) + ' Fourmis: ' + str(i) + ' ----------------------'
+			path =[]
+			premierVoyage = travels2[0].travelUncompatible
+
+			#if (premierVoyage != 0):
+			if (len(premierVoyage) != 0):
+				choix = randint(0, len(premierVoyage)-1)
+				path = move(travels2[choix], [travels2[0]],links)
+			else:
+				path = move(travels2[0], [travels2[0]],links)
+
+			score = computePath(path,links)
+			putPheromones(path,score)
+
+			for t in path:
+				print t.toString() + '   pheromones:' + str(t.pheromones)
+
+		evapore(travels2)
+
+	updateList(travels2, path)
+	print len(travels2)
+
 
 
 
