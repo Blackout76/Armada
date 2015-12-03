@@ -141,6 +141,7 @@ def exportIndividu2(nbBus,individu,travels):
 
 	indexBus = 0
 	for busTravels in buslistTravels:
+		busTravels.sort(key=lambda x: x.startPoint.time.inMin(), reverse=True)
 		if len(busTravels) > 0:
 			strtraj = 'bus' + str(indexBus)
 			for travel in busTravels:
