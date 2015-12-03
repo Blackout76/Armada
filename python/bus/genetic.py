@@ -6,14 +6,14 @@ from time import *
 from math import *
 import sys
 
-nbBus = 100
+nbBus = 30
 if len(sys.argv) > 1:
 	nbBus = int(sys.argv[1])
 	print "Bus number : " + int(sys.argv[1])
 
 print 'Loading ... '
 population_size = 100
-iteration = 50000
+iteration = 500000
 child_population_size = 20
 parents_count_min = 2
 parents_count_max = 8
@@ -29,6 +29,7 @@ incomp = generateIncomp(travels)
 timeStart = time()
 print 'Initialisation population 0 ... '
 population = createPopulation2(population_size,travels,nbBus)
+#population = createPopulation(population_size,travels,nbBus)
 print 'Evaluation population 0 ... '
 evalPopulation(population,incomp,travels,links,nbBus)
 
@@ -52,7 +53,9 @@ for i in range(iteration):
 	if population[population_size-1].score == population[0].score and population[population_size-1].score == 539:
 		if not isValidPop:
 			evalPopulation(population,incomp,travels,links,nbBus)
-		if i % 2000 == 0:
+			if i != 0:
+				break
+		if i % 2000 == 0 and i != 0:
 			exportIndividu2(population[population_size-1].scoreBus,population[population_size-1],travels)
 		isValidPop = True
 	else:
