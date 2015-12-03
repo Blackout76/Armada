@@ -9,6 +9,7 @@ class Travel(object):
 		self.travelBefore = []
 		self.travelAfter = []
 		self.travelUncompatible = []
+		self.pheromones = 0
 
 	def addTravelBefore(self,travel):
 		if not travel in self.travelBefore:
@@ -42,7 +43,7 @@ class Travel(object):
 			return 0
 
 	def toString (self):
-		return 'ligne:' + self.lineName + '   start:' + self.startPoint.name +'(' + self.startPoint.time.hour + ':' + self.startPoint.time.min + ')'+ '   end:' + self.endPoint.name +'(' + self.endPoint.time.hour + ':' + self.endPoint.time.min + ')'
+		return 'ligne(' + str(self.lineType) +'):' + self.lineName + '   start:' + self.startPoint.name +'(' + self.startPoint.time.hour + ':' + self.startPoint.time.min + ')'+ '   end:' + self.endPoint.name +'(' + self.endPoint.time.hour + ':' + self.endPoint.time.min + ')'
 	
 class TravelPoint(object):
 	def __init__(self,name,time):
